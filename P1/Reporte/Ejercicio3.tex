@@ -1,0 +1,23 @@
+\subsection{Generación de Señales Sintéticas de ECG.}
+
+\begin{enumerate}
+    \item Generar una Señal Sintética de ECG: Utilizar la función ECG de MATLAB o generar una 
+    onda sintética con sumas de senoidales. Una forma común es combinar ondas sinusoidales y 
+    pulsos para representar las ondas P, QRS y T de un ECG.
+    \item Añadir ruido a la señal de ECG: Simular ruido de alta frecuencia (por ejemplo, ruido 
+    de 60 Hz de interferencia eléctrica) y ruido aleatorio (ruido gaussiano).
+    \item Transformada de Fourier para analizar el espectro de frecuencia: Utilizar la 
+    Transformada Rápida de Fourier (FFT) para analizar las componentes de frecuencia de 
+    la señal con ruido.
+    \item Diseñar un filtro en el dominio de la frecuencia: Crea un filtro para eliminar 
+    el ruido de alta frecuencia (por ejemplo, frecuencias superiores a 40 Hz).
+    \item Comparar la señal original, la señal con ruido y la señal filtrada, superponer 
+    las tres señales para observar el efecto del filtrado y comentar:
+    \begin{itemize}
+        \item Descripción de los pasos realizados.
+        \item Resultados obtenidos (gráficos y análisis).
+        \item Discusión sobre la efectividad del filtrado en la eliminación del ruido.
+    \end{itemize}
+    \item (Opcional) Diseñar un filtro en el dominio del tiempo: Crea un filtro para 
+    eliminar el ruido de alta frecuencia y compara los resultados.
+\end{enumerate}
