@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  23 MAR 2026 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  23 MAR 2026 11:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -992,7 +992,7 @@ LaTeX Info: Redefining \% on input line 137.
 LaTeX Info: Redefining \. on input line 143.
 LaTeX Info: Redefining \% on input line 143.
 [7]
-runsystem(latexminted cleantemp  --timestamp 20260323113018 7790AC8DA9C360C5B286B835B98FB46A)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260323114536 7790AC8DA9C360C5B286B835B98FB46A)...executed safely (allowed).
 
  (build/Practica2.aux
 LaTeX Info: Redefining \. on input line 12.

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1774287018.01152 "/home/ibra/IIMAS/Sexto/Reconocimiento de Patrones/Prácticas/P2/Reporte/Practica2.tex" "build/Practica2.pdf" "Practica2" 1774287019.74565 0
+["pdflatex"] 1774287936.58619 "/home/ibra/IIMAS/Sexto/Reconocimiento de Patrones/Prácticas/P2/Reporte/Practica2.tex" "build/Practica2.pdf" "Practica2" 1774287938.31345 0
   "/etc/texmf/web2c/texmf.cnf" 1765955496.61123 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/ibra/IIMAS/Sexto/Reconocimiento de Patrones/Prácticas/P2/Reporte/Practica2.tex" 1774287016.00268 3615 6afb8c253ab1213750d18b4c1e777c68 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -207,7 +207,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765955520 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1765955584 3348250 33fb68348f0b57e52023f8c361681ff0 ""
-  "Codigo.tex" 1774286963.99472 274 7a99eeac910455feb77ffc7568432c21 ""
+  "Codigo.tex" 1774287934.88793 274 7a99eeac910455feb77ffc7568432c21 ""
   "Conclusiones.tex" 1772510164 0 d41d8cd98f00b204e9800998ecf8427e ""
   "Ejercicio.tex" 1774208719.22096 2661 b2c1639f158e1d329f8d63256beed4bb ""
   "Img/fig1_p2.png" 1774285864.74361 4994 e3ebfa799abb4c791460267c86ba816f ""
@@ -219,8 +219,8 @@
   "Portada.tex" 1774206948.57277 863 d2cf331e326eb5511004667aacf7a9f8 ""
   "Practica2.tex" 1774287016.00268 3615 6afb8c253ab1213750d18b4c1e777c68 ""
   "Referencias.tex" 1774208291.49954 425 cef1fcbf5fd79388305d593b4a5e016b ""
-  "build/Practica2.aux" 1774287019.63868 1876 9f663d11dc6f23e16dbc6f9e6ace3a6c "pdflatex"
-  "build/Practica2.out" 1774287019.63868 1213 aed1e7b136d70e1a722578d7bde02b41 "pdflatex"
+  "build/Practica2.aux" 1774287938.19586 1876 9f663d11dc6f23e16dbc6f9e6ace3a6c "pdflatex"
+  "build/Practica2.out" 1774287938.19586 1213 aed1e7b136d70e1a722578d7bde02b41 "pdflatex"
   (generated)
   "build/Practica2.aux"
   "build/Practica2.log"
