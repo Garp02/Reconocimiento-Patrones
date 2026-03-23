@@ -1,0 +1,25 @@
+A lo largo de esta práctica, se logró observar de manera experimental la importancia 
+crítica del preprocesamiento y limpieza de datos, imágenes y señales dentro de las 
+tareas de Reconocimiento de Patrones. 
+
+En la primera sección, el análisis exploratorio y de correlación del conjunto de datos 
+Iris nos permitió identificar dependencias positivas fuertes entre las medidas morfológicas 
+(como la longitud y ancho de los pétalos), lo cual es fundamental para el posterior 
+entrenamiento de modelos de clasificación geométrica.
+
+En la segunda sección, comprobamos que la aplicación de filtros de suavizado (destacando 
+el filtro Gaussiano como el resultado óptimo) es un paso indispensable antes de aplicar 
+técnicas de extracción de características como el operador de Sobel/Prewitt o la 
+Transformada de Hough. El ruido en la imagen original generaba falsos positivos masivos 
+en la detección de bordes y círculos, los cuales fueron mitigados eficazmente mediante 
+el filtrado.
+
+Finalmente, en el procesamiento de señales de ECG, pudimos comprobar la efectividad
+matemática de las transformaciones de datos. La señal ruidosa ocultaba casi por 
+completo las ondas de baja amplitud (P y T) del latido. Sin embargo, demostramos que 
+tanto el truncamiento espectral en el dominio de la frecuencia (vía FFT/IFFT) como el 
+uso de un filtro IIR en el dominio del tiempo (Butterworth) son altamente efectivos 
+para atenuar la interferencia de alta frecuencia y recuperar la integridad de la 
+morfología original de la señal cardiovascular.
+
+\QED

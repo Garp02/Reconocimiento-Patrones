@@ -1,0 +1,282 @@
+\subsection{Características de imágenes}
+
+Similar al ejercicio pasado, empezaremos cargando las bibliotecas 
+necesarias para realizar los ejercicios.
+
+\begin{lstlisting}[language = python, caption = {Carga de bibliotecas}]
+# Bibliotecas 
+
+import cv2
+import pandas as pd
+import numpy as np 
+import matplotlib.pyplot as plt
+
+from skimage.measure import regionprops
+from skimage.measure import label as sk_label
+\end{lstlisting}
+
+
+\subsubsection{Carga de imágenes}
+
+Proporcionaremos la dirección y el nombre del archivo para poder 
+trabajar con la imagen y usaremos \texttt{cv2} para poder leer 
+y trabajar con la siguiente imagen:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{Img/dune.jpeg}
+    \caption{Imagen a trabajar.}
+\end{figure}
+
+\begin{lstlisting}[language = python, caption = {Carga de la imagen a trabajar.}]
+img = cv2.imread('dune.jpeg')
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+\end{lstlisting}
+
+
+\subsubsection{Filtros de imágenes}
+
+Ya con nuestra imagen cargada, buscamos eliminar el mayor ruido posible 
+para que se identifiquen de mejor los bordes, líneas y figuras. 
+
+¿Cómo sé cuál filtro es mejor? No lo sé; por esa razón se aplicarán tres filtros 
+distintos y se compararán los resultados para encontrar el filtro que mejor se 
+ajuste a nuestras necesidades. 
+
+Para aplicar los filtros, llamamos a los métodos correspondientes con parámetros 
+convenientes. 
+
+\begin{lstlisting}[language = python, caption = {Filtro de imágenes.}]
+img_ = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+gaussian = cv2.GaussianBlur(img_, (9, 9), 2)
+median = cv2.medianBlur(img_, 9)
+bilateral = cv2.bilateralFilter(img_, 9, 75, 70)
+
+imagenes = [img, gaussian, median, bilateral]
+
+titulos = ['Original', 'Gaussiano', 'Mediana', 'Bilateral']
+
+plt.figure(figsize = (10, 10))
+
+for i in range(len(imagenes)):
+
+    plt.subplot(2, 2, i + 1) 
+    plt.imshow(imagenes[i], cmap = 'gray')
+    plt.title(titulos[i])
+    plt.xticks([]), plt.yticks([])
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{Img/filtros.png}
+    \caption{Comparación de los filtros y la imagen original.}
+\end{figure}
+
+
+\subsubsection{Operadores Prewitt y Sobel para la detección de bordes}
+
+En esta sección nos encontramos con un problema similar a la pasada, 
+¿cómo podemos saber cuál operador nos conviene más? 
+
+En este caso compararemos los dos métodos y mostraremos las diferencias 
+entre ellos.
+
+\begin{lstlisting}[language = python, caption = {Definición de operadores de Prewwit 
+    y Sobel.}]
+sobelx = cv2.Sobel(gaussian, cv2.CV_64F, 1, 0, ksize = 3)
+sobely = cv2.Sobel(gaussian, cv2.CV_64F, 0, 1, ksize = 3)
+sobel_magnitud = np.sqrt(sobelx**2 + sobely**2)
+sobel_magnitud = np.uint8(255 * sobel_magnitud / np.max(sobel_magnitud))
+
+kernelx = np.array([[1, 1, 1], [0, 0, 0], [-1, -1, -1]])
+kernely = np.array([[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]])
+prewittx = cv2.filter2D(gaussian, cv2.CV_64F, kernelx)
+prewitty = cv2.filter2D(gaussian, cv2.CV_64F, kernely)
+prewitt_magnitude = np.sqrt(prewittx**2 + prewitty**2)
+prewitt_magnitude = np.uint8(255 * prewitt_magnitude / np.max(prewitt_magnitude))
+\end{lstlisting}
+
+\textit{Nota: En la última sección se compararán los resultados.}
+
+\subsubsection{Transformada de Hough}
+
+Primero binarizariemos las imágenes para destacar los bordes. Después 
+usaremos la biblioteca \texttt{skimage} para etiquetar las regiones; después, con 
+\texttt{regionprops} obtendremos las propiedades de las regiones, las cuales 
+ordenaremos, imprimiremos y contaremos para tener un poco más de información.  
+
+\begin{lstlisting}[language = python, caption = {Obtención de regiones.}]
+# Binarizamos la imagen de bordes
+_, umbralizada = cv2.threshold(sobel_magnitud, 50, 255, cv2.THRESH_BINARY)
+
+# Etiquetamos las regiones conectadas
+imagen_etiquetada = sk_label(umbralizada)
+
+propiedades = regionprops(imagen_etiquetada)
+
+print(f"Total de regiones: {len(propiedades)}.\n")
+
+propiedades_ordenadas = sorted(propiedades, key = lambda p: p.area, reverse = True)
+
+for i, prop in enumerate(propiedades_ordenadas[:5]):
+
+    print(f"Región {i+1}:")
+    print(f"  - Área: {prop.area} píxeles")
+    print(f"  - Perímetro: {prop.perimeter:.2f}")
+    print(f"  - Excentricidad: {prop.eccentricity:.2f}")
+    print(f"  - Centro de masa (y, x): ({prop.centroid[0]:.2f}, {prop.centroid[1]:.2f})")
+\end{lstlisting}
+
+\begin{lstlisting}[language = python, caption = {Primeras cinco regiones.}]
+Total de regiones: 202.
+
+Región 1:
+  - Área: 12048.0 píxeles
+  - Perímetro: 4586.89
+  - Excentricidad: 0.79
+  - Centro de masa (y, x): (244.00, 332.55)
+Región 2:
+  - Área: 4386.0 píxeles
+  - Perímetro: 1789.76
+  - Excentricidad: 0.76
+  - Centro de masa (y, x): (322.29, 819.72)
+Región 3:
+  - Área: 3835.0 píxeles
+  - Perímetro: 1499.18
+  - Excentricidad: 1.00
+  - Centro de masa (y, x): (41.52, 353.91)
+Región 4:
+  - Área: 2849.0 píxeles
+  - Perímetro: 1085.42
+  - Excentricidad: 0.56
+  - Centro de masa (y, x): (447.42, 101.54)
+Región 5:
+  - Área: 2247.0 píxeles
+  - Perímetro: 1021.08
+  - Excentricidad: 0.73
+  - Centro de masa (y, x): (445.40, 492.96)
+\end{lstlisting}
+
+
+Ahora, se definirá una función que detecte círculos mediante Hough. 
+
+\begin{lstlisting}[language = python, caption = {Función para detectar círculos.}]
+def detectar_circulo(imagen, titulo):
+
+    if len(imagen.shape) == 3: 
+
+        img_gris = cv2.cvtColor(imagen, cv2.COLOR_RGB2GRAY)
+        img_dibujo = imagen.copy()
+
+    else: 
+
+        img_gris = imagen
+        img_dibujo = cv2.cvtColor(imagen, cv2.COLOR_GRAY2RGB) 
+
+    circulos = cv2.HoughCircles(
+        img_gris, 
+        cv2.HOUGH_GRADIENT,
+        dp = 1, 
+        minDist = 25, 
+        param1 = 150, 
+        param2 = 30, 
+        minRadius = 0, 
+        maxRadius = 0
+    )
+
+    if circulos is not None:
+
+        circulos = np.uint16(np.around(circulos))
+
+        for c in circulos[0, :]:
+            
+            cv2.circle(img_dibujo, (c[0], c[1]), c[2], (0, 255, 0), 2)
+            cv2.circle(img_dibujo, (c[0], c[1]), 2, (255, 0, 0), 3)
+            
+    plt.imshow(img_dibujo)
+    plt.title(titulo)
+    plt.xticks([]), plt.yticks([])
+\end{lstlisting}
+
+Para finalizar esta sección, se preparará la visualización de los resultados 
+comparando las diferencias de los operadores Prewitt y Sobel y se resaltarán 
+para obtener una mejor visualización.
+
+\begin{lstlisting}[language = python, caption = {.}]
+# Diferencia entre Sobel y Prewitt
+diferencia = cv2.absdiff(sobel_magnitud, prewitt_magnitude)
+
+diferencia_resaltada = cv2.normalize(diferencia, None, 0, 255, cv2.NORM_MINMAX)
+\end{lstlisting}
+
+\subsubsection{Visualización y comparación de resultados}
+
+Primero se visualizarán los resultados obtenidos con Sobel y Prewitt y sus diferencias.
+Para apreciar mejor las diferencias, se optó por usar un \texttt{cmap = 'hot'}, entre más 
+brille una región, más diferencias tendrán. 
+
+\begin{lstlisting}[language = python, caption = {Comparación de Prewitt y Sobel.}]
+plt.figure(figsize = (15, 5))
+
+plt.subplot(1, 3, 1)
+plt.imshow(sobel_magnitud, cmap = 'gray')
+plt.title('Bordes con Sobel')
+plt.axis('off')
+
+plt.subplot(1, 3, 2)
+plt.imshow(prewitt_magnitude, cmap = 'gray')
+plt.title('Bordes con Prewitt')
+plt.axis('off')
+
+plt.subplot(1, 3, 3)
+plt.imshow(diferencia_resaltada, cmap = 'hot') # Los cambios brillan
+plt.title('Diferencia Sobel y Prewitt')
+plt.axis('off')
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{Img/dif_operadores.png}
+    \caption{Comparación de operadores.}
+\end{figure}
+
+Para los resultados finales de los distintos filtros, compararemos 
+las cuatro imágenes (original, filtro gaussiano, mediana y bilateral).
+
+\begin{lstlisting}[language = python, caption = {Resultados con imagen 
+    original y con  filtros.}]
+plt.figure(figsize = (12, 10))
+
+for i in range(len(imagenes)):
+
+    plt.subplot(2, 2, i + 1) 
+    detectar_circulo(imagenes[i], titulos[i])
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.6\textwidth]{Img/Resultados.png}
+    \caption{Resultados finales.}
+\end{figure}
+
+Y de las comparaciones, podemos concluir que, aunque hay muchas regiones 
+diferentes aplicando Prewitt o Sobel, el resultado percibido nos es 
+indiferente. Por otro lado, el resultado es bastante distinto al comparar 
+los círculos generados con los distintos filtros y la imagen original; 
+el resultado óptimo se obtiene con el filtro gaussian.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1\textwidth]{Img/gaussian.png}
+    \caption{Resultado óptimo.}
+\end{figure}

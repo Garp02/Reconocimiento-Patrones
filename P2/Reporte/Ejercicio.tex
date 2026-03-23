@@ -1,0 +1,45 @@
+
+\begin{enumerate}
+    \item \textbf{Descarga y organiza el conjunto de imágenes:} Puedes utilizar el dataset clásico
+          en análisis de texturas Brodatz Texture Dataset, el conjunto Flickr Material Database (FMD) o
+          un conjunto personalizado de distintas clases:
+          \begin{itemize}
+              \item corteza, ladrillo, burbujas, hierba, cuero, piel, rafia, arena, paja, agua, tejido,
+                    madera, lana
+          \end{itemize}
+    \item \textbf{Carga las imágenes y conviértelas a escala de grises:} El Brodatz Texture
+          Dataset original no incluye etiquetas categóricas. Sin embargo, existen versiones modificadas
+          y extensiones del dataset que sí incluyen etiquetas o puedes asignar etiquetas basadas en la
+          tabla de referencia.
+          \begin{itemize}
+              \item Mostrar imagen e histograma de una imagen de cada clase.
+          \end{itemize}
+    \item \textbf{Implementación de LBP.} El algoritmo LBP sigue estos pasos:
+          \begin{enumerate}
+              \item Para cada píxel central, comparar su intensidad con 8 vecinos.
+              \item Generar un patrón binario (1 si el vecino > central, 0 en otro caso).
+              \item Convertir el binario a decimal y reemplazar el píxel central.
+          \end{enumerate}
+    \item \textbf{Extracción de Características:} Convertir cada imagen LBP en un histograma de
+          256 bins (para valores 0-255).
+          \begin{enumerate}
+              \item Mostrar el histograma normalizado de una imagen de cada clase.
+              \item Comparar histogramas por clase (ej. madera vs. tela vs. piedra).
+          \end{enumerate}
+    \item \textbf{Clasificación y Evaluación}
+          \begin{enumerate}
+              \item Divide los datos en entrenamiento (70\%) y prueba (30\%).
+              \item Usa un modelo simple como vecinos más cercanos (k-NN) o Máquina de Soporte Vectorial
+                    (SVM) sobre los vectores de características y entrena el modelo.
+              \item Calcula la exactitud en el conjunto de prueba.
+              \item Visualiza las imágenes LBP para entender qué patrones se están detectando.
+              \item Mostrar matriz de confusión.
+          \end{enumerate}
+    \item \textbf{Visualización de Resultados:}
+          \begin{enumerate}
+              \item Descripción de los pasos realizados.
+              \item Resultados obtenidos (gráficos y análisis).
+          \end{enumerate}
+    \item Repite los pasos 3, 4, 5 y 6 aplicando el algoritmo LBP con configuraciones como
+          $P=16, R=2$ y $P=24, R=3$ y compara resultados.
+\end{enumerate}

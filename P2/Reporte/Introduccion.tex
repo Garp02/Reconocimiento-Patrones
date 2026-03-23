@@ -1,0 +1,94 @@
+Los histogramas constituyen la base de varias técnicas de procesamiento
+en el dominio espacial. La manipulación de los histogramas es usada de
+manera eficiente en el realce o mejoramiento de la calidad de una imagen.
+La información estadística obtenida a partir de los histogramas se utiliza
+en diversas aplicaciones como compresión y segmentación de imágenes. La
+facilidad con la que se pueden calcular los histogramas usando software y
+su bajo consumo de recursos de hardware en su implementación, han hecho de
+esta herramienta una de las más usadas en el procesamiento en tiempo real.
+
+El histograma de una imagen es la representación gráfica de la distribución
+que existe de las distintas tonalidades de grises con relación al número de
+píxeles o porcentaje de los mismos, es decir, un histograma representa la
+frecuencia relativa de ocurrencia de los niveles de gris. La representación
+de un histograma ideal sería la de una recta horizontal, ya que eso nos
+indicaría que todos los posibles valores de grises están distribuidos de
+manera uniforme en nuestra imagen.
+
+La ecualización del histograma es una técnica bastante conocida y sirve para
+obtener un histograma uniforme de tal manera que los niveles de gris son
+distribuidos sobre la escala y un número igual de píxeles son colocados en
+cada nivel de gris. Para un observador, esta ecualización hace que las imágenes
+se vean más balanceadas y con mejor contraste. Como consecuencia, una imagen
+ecualizada, permite que ciertos detalles sean visibles en regiones oscuras o
+brillantes.
+
+Un pixel $p$ en las coordenadas $(x, y)$ tiene 4 vecinos horizontales y 4
+verticales cuyas coordenadas están dadas por:
+\begin{equation}
+    (x+1,y), (x-1,y), (x,y+1), (x,y-1)
+\end{equation}
+
+Este grupo de píxeles se anota con $N_{4}(p)$. Así mismo, las vecindades
+diagonales con el punto $(x,y)$ se anotan como $N_{D}(p)$ y sus coordenadas son:
+\begin{equation}
+    (x+1,y+1), (x-1, y-1), (x-1,y+1), (x+1, y-1)
+\end{equation}
+
+Para definir de forma adecuada el concepto de vecindad, es necesario revisar el
+de adyacencia. Dos píxeles son adyacentes si, y sólo si, tienen en común una de
+sus fronteras, o al menos una de sus esquinas. La figura 1 muestra píxeles adyacentes.
+
+Dos píxeles son vecinos si cumplen con la definición de adyacencia. Si los
+píxeles comparten una de sus fronteras, se dice que los mismos son vecinos
+directos; si solo se tocan en una de sus esquinas, se llaman vecinos indirectos.
+
+Una vecindad de un pixel $p_{0}$ denota como $V_{p}$, es una submatriz $M_{KL}$
+de tamaño $K \times L$ con $K$ y $L$ enteros impares pequeños, contenida en la
+matriz imagen $(i_{MN})$, la cual está formada por un número finito de pixeles
+vecinos o no de $p_{0}$.
+
+\begin{equation}
+    V_{p}=\{p:p \in M_{KL}\}; \quad M_{KL} \subset i_{MN}; \quad K=L=3,5,9
+\end{equation}
+
+Para ilustrar las definiciones anteriores, se puede observar en la figura 2,
+vecindades de 4 y de vecindades 8, la primera formada por píxeles que son vecinos
+directos, mientras que la vecindad de 8 está formada tanto por vecinos directos
+como indirectos.
+
+En el desarrollo de las técnicas de procesamiento de imágenes que involucren el
+análisis de una determinada región de la escena digital, es posible encontrar
+vecindades de $5 \times 5$ y hasta $9 \times 9$ básicamente la definición de las
+dimensiones de la matriz vecindad depende de la técnica que se esté desarrollando.
+
+\subsection*{Principio del algoritmo LBP}
+El algortimo de patrones binarios locales (LBP por sus siglas en ingles Local
+Binary Pattern) es un algoritmo muy usado en visión por computadora para describir
+la textura de una imagen. Funciona comparando la intensidad de un píxel con la de
+sus vecinos y generando un código binario que representa el patrón local. El
+algoritmo de LBP calcula una puntuación para cada píxel comparándolo con sus vecinos.
+
+Matemáticamente, para un píxel central $g_{c}$ y $P$ vecinos en un radio $R$:
+\begin{equation}
+    LBP_{P,R}=\sum_{p=0}^{P-1}s(g_{p}-g_{c})2^{p}
+\end{equation}
+
+Donde $s(x)$ es la función signo:
+\begin{itemize}
+    \item $s(x)=1$ si $x \ge 0$
+    \item $s(x)=0$ si $x < 0$
+\end{itemize}
+
+Para entender la técnica de LBP, debemos mirar dentro de una ventana de $3 \times 3$
+píxeles. El algoritmo convierte la textura local en un número entero simple.
+
+\textbf{Mecánica de Cálculo Manual (Invariante a la Rotación):}
+\begin{enumerate}
+    \item \textbf{Umbralización:} Compara cada uno de los 8 vecinos $(P=8, R=1)$ con
+          el píxel central. Si el vecino es mayor o igual, se asigna '1'; de lo contrario, '0'.
+    \item \textbf{Ponderación y Suma:} Los bits resultantes se multiplican por
+          potencias de 2 $(2^{0}, 2^{1}, ..., 2^{7})$ siguiendo un orden (por ejemplo,
+          sentido horario comenzando arriba a la izquierda) y se suman para obtener el
+          valor LBP decimal.
+\end{enumerate}

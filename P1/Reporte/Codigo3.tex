@@ -1,0 +1,144 @@
+\subsection{Señales sintéticas de ECG}
+
+Similar a los ejercicios anteriores, empezaremos importando las bibliotecas 
+necesarias para trabajar con señales unidimensionales y aplicar los filtros 
+correspondientes.
+
+\begin{lstlisting}[language = Python, caption = {Carga de bibliotecas para procesamiento de señales.}]
+# Bibliotecas
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import butter, filtfilt
+\end{lstlisting}
+
+\subsubsection{Generación de la señal original}
+
+Para crear nuestra señal sintética, utilizaremos la suma de funciones gaussianas. 
+Cada función simulará una parte del complejo PQRST del latido cardíaco ajustando 
+su amplitud, centro y ancho. Posteriormente, crearemos una señal continua sumando 
+varios de estos latidos a lo largo de un vector de tiempo.
+
+\begin{lstlisting}[language = Python, caption = {Generación de la señal sintética de ECG.}]
+frecuencia = 500  # Frecuencia de muestreo 
+t = np.arange(0, 3, 1/frecuencia)  # Vector de tiempo de 3 segundos
+
+# Utilizamos funciones Gaussianas para simular el PQRST
+def simular_latido(t_local):
+    ondas = [
+        (0.15, -0.2, 0.02),   # Onda P
+        (-0.15, -0.05, 0.01), # Onda Q
+        (1.0, 0.0, 0.015),    # Onda R
+        (-0.25, 0.05, 0.015), # Onda S
+        (0.3, 0.3, 0.04)      # Onda T
+    ]
+    latido = np.zeros_like(t_local)
+    for a, mu, sigma in ondas:
+        latido += a * np.exp(-0.5 * ((t_local - mu) / sigma)**2)
+    return latido
+
+# Creamos una señal vacía y le sumamos latidos cada 1 segundo
+ecg_original = np.zeros_like(t)
+for i in range(4): # Latidos en los segundos 0, 1, 2 y 3
+    ecg_original += simular_latido(t - i)
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ecg_original.png}
+    \caption{Señal sintética de ECG original.}
+    \label{fig:ecg_original}
+\end{figure}
+
+\subsubsection{Adición de ruido a la señal}
+
+Para emular un escenario realista y poner a prueba los filtros, agregaremos 
+dos tipos de ruido a nuestra señal original: una interferencia eléctrica 
+simulada con una onda senoidal de 60 Hz, y ruido aleatorio (ruido gaussiano) 
+para emular la estática de los sensores.
+
+\begin{lstlisting}[language=Python, caption={Adición de ruido de 60 Hz y ruido gaussiano.}]
+ruido_60hz = 0.2 * np.sin(2 * np.pi * 60 * t)       # Interferencia electrica (60 Hz)
+ruido_gauss = np.random.normal(0, 0.08, len(t))     # Ruido aleatorio (Gaussiano)
+
+ecg_ruidoso = ecg_original + ruido_60hz + ruido_gauss
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ecg_ruido.png}
+    \caption{Señal de ECG con ruido.}
+    \label{fig:ecg_ruido}
+\end{figure}
+
+\subsubsection{Transformada de Fourier y filtrado en frecuencia}
+
+Para analizar las componentes de frecuencia de la señal contaminada, utilizaremos 
+la Transformada Rápida de Fourier (FFT). Posteriormente, diseñaremos un filtro ideal 
+en el dominio de la frecuencia estableciendo a cero todas las frecuencias superiores 
+a 40 Hz, y regresaremos al dominio del tiempo con la transformada inversa (IFFT).
+
+\begin{lstlisting}[language=Python, caption={Aplicación de la FFT y filtrado en el dominio de la frecuencia.}]
+N = len(t)
+freqs = np.fft.fftfreq(N, 1/frecuencia)
+fft_ruidoso = np.fft.fft(ecg_ruidoso)
+
+# Hacemos una copia y establecemos a cero las frecuencias mayores a 40 Hz
+fft_filtrado = fft_ruidoso.copy()
+fft_filtrado[np.abs(freqs) > 40] = 0  
+
+# Transformada inversa (IFFT) para volver al dominio del tiempo
+ecg_filtrado_freq = np.real(np.fft.ifft(fft_filtrado))
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ecg_espectro.png}
+    \caption{Espectro de frecuencia de la señal con ruido.}
+    \label{fig:ecg_espectro}
+\end{figure}
+
+\subsubsection{Filtrado en el dominio del tiempo}
+
+De manera opcional y para tener un punto de comparación, se diseñó un filtro 
+pasabajas de Butterworth de orden 4 con una frecuencia de corte de 40 Hz.
+ Para evitar el desfasamiento temporal de la señal, se aplicó el filtro 
+ utilizando la función \texttt{filtfilt}.
+
+\begin{lstlisting}[language=Python, caption={Filtro Butterworth pasabajas en el dominio del tiempo.}]
+# Filtro Butterworth pasa bajas de orden 4, frecuencia de corte 40 Hz
+b, a = butter(4, 40, fs=frecuencia, btype='low')
+
+# Usamos filtfilt para no generar desfasaje temporal
+ecg_filtrado_tiempo = filtfilt(b, a, ecg_ruidoso)
+\end{lstlisting}
+
+\subsubsection{Visualización y comparación de resultados}
+
+Para finalizar esta sección, se preparará la visualización de los resultados 
+superponiendo la señal original, la señal con ruido y las dos señales filtradas 
+para observar la efectividad de los métodos aplicados.
+
+\begin{lstlisting}[language=Python, caption={Comparación y superposición de las señales de ECG.}]
+plt.figure(figsize = (12, 6))
+
+plt.plot(t, ecg_ruidoso, label = 'Señal con Ruido', color = 'gray', alpha = 0.3)
+plt.plot(t, ecg_original, label = 'Original', color = 'green', linewidth = 1.5, alpha = 0.8)
+plt.plot(t, ecg_filtrado_freq, label = 'Filtrada (Frecuencia)', color = 'red', linestyle = 'dashed', linewidth = 2, alpha = 0.6)
+plt.plot(t, ecg_filtrado_tiempo, label = 'Filtrada (Tiempo)', color = 'blue', linestyle = 'dotted', linewidth = 2)
+
+plt.title('Comparación y Superposición de Señales')
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Amplitud')
+plt.xlim(0, 3)
+plt.legend(loc = 'upper right')
+plt.grid(True, alpha = 0.3, linestyle = '--')
+plt.show()
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ecg_comparacion.png}
+    \caption{Comparación de la efectividad de los filtros en la señal de ECG.}
+    \label{fig:ecg_comparacion}
+\end{figure}

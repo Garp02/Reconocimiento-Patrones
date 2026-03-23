@@ -1,0 +1,13 @@
+\subsection{Extracción de Características en Imágenes.}
+
+\begin{enumerate}
+    \item Carga una imagen de tu elección (Asegurarse tener instalado el Image Processing Toolbox de MATLAB).
+    \item Preprocesamiento de la imagen: Convierte la imagen a escala de grises si es necesario. Aplica un filtro de suavizado (por ejemplo, un filtro Gaussiano) para reducir el ruido.
+    \item Extracción de bordes: Utiliza el operador de Prewitt o Sobel para detectar bordes en la imagen.
+    \item Descriptores de forma: Utiliza la transformada de Hough para detectar líneas o círculos en la imagen. Extrae propiedades de regiones utilizando \texttt{regionprops}.
+    \item Visualizar y comparar los resultados:
+    \begin{itemize}
+        \item Visualiza los resultados de cada paso (imagen suavizada, bordes detectados, círculos detectados, etc.).
+        \item Analiza las características extraídas (formas, bordes) y su relación con el contenido de la imagen.
+    \end{itemize}
+\end{enumerate}
