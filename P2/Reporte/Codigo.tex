@@ -2,6 +2,27 @@
 
 El notebook  \texttt{.ipynb} así como los demás archivos de la práctia se
 encuentran en el siguiente repositorio de GitHub:
-\hyperlink{P2}{\textcolor{blue}{https://github.com/Garp02/Reconocimiento-Patrones/tree/main/P2}}
+\hyperlink{P2}{\textcolor{iimasorange}{https://github.com/Garp02/Reconocimiento-Patrones/tree/main/P2}}
 
 \subsection{Resultados}
+
+Para la carga de datos iteramos sobre la carpeta \texttt{KTH\_TIPS} buscando
+las carpetas y leemos solo los archivos que sean imágenes; después se  convierte
+la imagen a otra paleta de colores y se redimencionan a 200 px $\times$ 200 px.
+Después las guardamos en un array de numpy y calculamos los archivos encontrados
+(con la longitud del array).
+
+Para comprobar que los datos hayan sido cargados correctamente, tomamos un
+elemento \texttt{im} del array para visualizar la imagen en escala de grises
+y  su histograma correspondiente.
+
+\vspace{0.5 cm}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo1.png}
+    \caption{Visualización de dato cargado.}
+\end{figure}
+
+\vspace{0.5 cm}
+

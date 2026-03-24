@@ -386,6 +386,11 @@ INPUT Ejercicio.tex
 INPUT ./Codigo.tex
 INPUT ./Codigo.tex
 INPUT Codigo.tex
+INPUT ./Img/img_histo1.png
+INPUT ./Img/img_histo1.png
+INPUT ./Img/img_histo1.png
+INPUT ./Img/img_histo1.png
+INPUT ./Img/img_histo1.png
 INPUT ./Conclusiones.tex
 INPUT ./Conclusiones.tex
 INPUT Conclusiones.tex
