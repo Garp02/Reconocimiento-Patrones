@@ -15,7 +15,7 @@
 \usepackage{soul, ulem, cancel}
 \usepackage[table]{xcolor}
 \usepackage{algorithm2e}
-
+\usepackage{tcolorbox}
 \usepackage{graphicx}
 \graphicspath{{./} {Img/}}
 
@@ -48,6 +48,12 @@ outer sep = 0pt, line width = 0.7pt]
 \newcommand{\QED}{\begin{flushright}$\blacksquare$\end{flushright}}
 
 % Colores para las tablas
+\definecolor{skbackground}{HTML}{F0F8FF} % Fondo principal azul muy claro
+\definecolor{skheader}{HTML}{B3DBFD}     % Borde de la caja azul
+\definecolor{skorange}{RGB}{255,94,0}    % Naranja para valores modificados
+\definecolor{skrowodd}{HTML}{FFFFFF}     % Filas impares (blanco)
+\definecolor{skroweven}{HTML}{F6F6F6}    % Filas pares (gris muy claro)
+\definecolor{skgrid}{RGB}{200,200,200}   % Bordes de la tabla
 \definecolor{headerblue}{HTML}{4F81BD}
 \definecolor{headertext}{HTML}{FFFFFF}
 \definecolor{rowgray}{HTML}{F2F2F2}

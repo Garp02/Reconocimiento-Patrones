@@ -1,0 +1,30 @@
+
+Se comprobó que los Patrones Binarios Locales son un método ligero y efectivo para la 
+extracción de características espaciales. Al combinar los histogramas LBP con un 
+clasificador supervisado K-NN, se logró una exactitud máxima del $89.30\%$, demostrando 
+que la frecuencia de estos micropatrones sirve como una ``firma´´ para clasificar 
+texturas de diferentes materiales.
+
+Al comparar los tres modelos evaluados, se observó un comportamiento no esperado: 
+el rendimiento del modelo disminuyó conforme se aumentó el radio de búsqueda 
+(obteniendo $89.30\%$ para $R=1$, $86.77\%$ para $R=2$, y $86.42\%$ para $R=3$). 
+Esto indica que, para el conjunto de datos \texttt{KTH\_TIPS}, las características 
+que mejor distinguen a las clases residen en las texturas más pequeñas, como los poros 
+de la esponja o los granos de la lija, más que en las estructuras de mayor tamaño. 
+
+La experimentación con $P=24$ dejó en evidencia el costo computacional exponencial 
+del algoritmo LBP estándar, el cual generó vectores de $2^{24}$ dimensiones que 
+desbordaron la memoria. Se concluye que el uso de métodos de reducción como LBP 
+\textit{'uniform'} es indispensable en parámetros altos, ya que permitió reducir la 
+dimensionalidad a solo 26 características manteniendo una exactitud de ($86.42\%$).
+
+Se observó que los algoritmos de clasificación basados en árboles subyacentes en 
+K-NN colapsan ante la alta dimensionalidad. La transición a una búsqueda de 
+distancias por fuerza bruta y el ajuste del tipo de dato a punto flotante de 32 
+bits fueron cruciales para resolver los cuellos de botella durante la fase de evaluación.
+
+La configuración inicial de $P=8, R=1$ resultó ser la más óptima para este problema 
+en específico, logrando una entre precisión de clasificación, bajo consumo de recursos 
+computacionales y rapidez de ejecución algorítmica.
+
+\QED

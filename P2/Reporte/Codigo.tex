@@ -12,17 +12,292 @@ la imagen a otra paleta de colores y se redimencionan a 200 px $\times$ 200 px.
 Después las guardamos en un array de numpy y calculamos los archivos encontrados
 (con la longitud del array).
 
-Para comprobar que los datos hayan sido cargados correctamente, tomamos un
-elemento \texttt{im} del array para visualizar la imagen en escala de grises
-y  su histograma correspondiente.
+Cargamos una imagen en escala de grises de cada clase junto a su histograma para 
+poder comprobar que se hayan cargado correctamente. 
 
-\vspace{0.5 cm}
+\vspace{0.2 cm}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width = 1 \textwidth]{Img/img_histo1.png}
-    \caption{Visualización de dato cargado.}
+    \caption{Visualización de dato de la clase aluminium\_foil con su histograma.}
 \end{figure}
 
-\vspace{0.5 cm}
+\vspace{0.2 cm}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo2.png}
+    \caption{Visualización de dato de la clase brown\_bread con su histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo3.png}
+    \caption{Visualización de dato de la clase corduroy con su histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo4.png}
+    \caption{Visualización de dato de la clase cracker con su histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo5.png}
+    \caption{Visualización de dato de la clase linen con su histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo6.png}
+    \caption{Visualización de dato de la clase orange\_peel con su histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo7.png}
+    \caption{Visualización de dato de la clase sponge con su histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo8.png}
+    \caption{Visualización de dato de la clase styrofoam con su histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\subsection{Implementación de LBM}
+
+Para la implementación de este método se optó por hacer métodos auxiliares para 
+tener mayor control ante errores; además, gracias a estos métodos auxilires se 
+puede modificar la implementación según las necesidades de quien lo use.
+
+También se implementó un método que crea histogramas normalizados con 256 bins 
+de una imagen a la que ya se le aplicó LBP. Esto para poder imprimir la imágenes 
+procesadas con su histograma de frecuencias y su patrón LBP de 0 a 255.
+
+Se mostrarán imágenes con sus respectivos histogramas mediante iteraciones sobre la 
+lista de imágenes; para esta lista tomamos las etiquetas únicas (etiquetas por clase) 
+y con ello podemos traer todas las clases del dataset de imágenes.
+
+
+\subsubsection{Imágenes LBP e histogramas LBP normalizados}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm1.png}
+    \caption{Clase brown\_bread con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm2.png}
+    \caption{Clase sandpaper con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm3.png}
+    \caption{Clase sponge con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm4.png}
+    \caption{Clase cracker con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm5.png}
+        \caption{Clase cotton con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm6.png}
+    \caption{Clase linen con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm7.png}
+    \caption{Clase corduroy con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm8.png}
+    \caption{Clase aluminium\_foil con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm9.png}
+    \caption{Clase styrofoam con histograma.}
+\end{figure}
+
+\vspace{0.2 cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 1 \textwidth]{Img/img_histo_norm10.png}
+    \caption{Clase orange\_peel con histograma.}
+\end{figure}
+
+\subsection{Extracción de características}
+
+Para extraer las características del LBP usamos una lista e iteramos las imágenes 
+en la lista de las imágenes del dataset. Invocamos al método que implementa el lbp 
+y el histrogramanormalizado, después, agrgamos el patrón del LBP a la lista de 
+características. Este proceso tomó una media de tres minutos y medio. 
+
+Después de extraer las características, las pasamos a un arreglo \texttt{X} para 
+poder hacer el entrenamiento del modelo supervidado \texttt{K-NN}, para ello 
+también necesitamos tomar las etiquetas de en otro arreglo \texttt{y}.
+
+Ahora dividiremos los conjuntos de prueba y entrenamiento con \texttt{train\_split\_test}, 
+para ello asignaremos un 30\% de los datos a prueba y el otro 70\% a entrenamiento. 
+Para probar nuestro modelo supervisaro iniciaremos el entrenamiento con 3 vecinos y con la 
+métrica euclidiana. Así obtenemos la siguiente tabla:
+
+\vspace{1.5 cm}
+
+\begin{tcolorbox}[
+    width = 6.5 cm,
+    center,
+    colback = skbackground,
+    colframe = skheader,
+    boxrule = 1.5pt,
+    arc = 4pt,
+    title = {\textcolor{black}{\texttt{\textbf{KNeighborsClassifier}}}},
+    coltitle = black,
+    fonttitle = \ttfamily\bfseries,
+    halign title = center
+]
+    \ttfamily\small 
+    
+    Parameters \\[1ex] 
+    
+    \centering
+    \arrayrulecolor{skgrid} 
+    \rowcolors{1}{skrowodd}{skroweven} 
+    
+    \renewcommand{\arraystretch}{1.2} 
+    
+    \begin{tabular}{|l|l|}
+    \hline
+    \textcolor{skorange}{n\_neighbors} & \textcolor{skorange}{3} \\
+    \hline
+    weights & 'uniform' \\
+    \hline
+    algorithm & 'auto' \\ 
+    \hline 
+    leaf\_size & 30 \\ 
+    \hline
+    p & 2 \\ 
+    \hline
+    \textcolor{skorange}{metric} & \textcolor{skorange}{'euclidean'} \\ 
+    \hline
+    metric\_params & None \\
+    \hline
+    n\_jobs & None \\
+    \hline
+    \end{tabular}
+\end{tcolorbox}
+
+\newpage
+
+\subsubsection{Evaluación del modelo}
+
+Tomamos el método \texttt{predict} de \texttt{KNN}, ingresamos el vector \texttt{X\_test}
+
+y calculamos el \texttt{accuracy\_score}; después, visualizamos nuestra imágenes para 
+compararlas con las obtenidas con \texttt{LBP}, calculamos la matriz de confusión y le 
+damos formato.
+
+\texttt{accuracy\_score}: $89.30 \%$
+
+\vspace{1.5 cm}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width = 0.6 \textwidth]{Img/original_vs_lbp81.png}
+%     \caption{Comparación original vs LBP con $P = 8, R = 1$.}
+% \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{Img/matriz_confusio81.png}
+    \caption{Matriz de confusión de clasificación LBP.}
+\end{figure}
+
+Para el caso del modelo con $P = 16, R = 2$ se obtuvieron los siguientes resultados:
+
+\texttt{accuracy\_score}: $86.77 \%$
+
+\vspace{1.5 cm}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width = 0.6 \textwidth]{Img/original_vs_lbp162.png}
+%     \caption{Comparación original vs LBP con $P = 16, R = 2$.}
+% \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{Img/matriz_confusio162.png}
+    \caption{Matriz de confusión de clasificación LBP.}
+\end{figure}
+
+Y finalmente, para el modelo con $P = 24, R = 3$ se obtuvieron los 
+siguientes resultados:
+
+\texttt{accuracy\_score}: $86.42 \%$
+
+\vspace{1.5 cm}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width = 0.6 \textwidth]{Img/original_vs_lbp243.png}
+%     \caption{Comparación original vs LBP con $P = 24, R = 3$.}
+% \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{Img/matriz_confusio243.png}
+    \caption{Matriz de confusión de clasificación LBP.}
+\end{figure}
