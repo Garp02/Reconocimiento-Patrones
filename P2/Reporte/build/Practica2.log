@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.22)  26 MAR 2026 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.22)  26 MAR 2026 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1181,39 +1181,70 @@ LaTeX Info: Redefining \% on input line 242.
 <Img/matriz_confusio81.png, id=230, 569.4876pt x 570.933pt>
 File: Img/matriz_confusio81.png Graphic file (type png)
 <use Img/matriz_confusio81.png>
-Package pdftex.def Info: Img/matriz_confusio81.png  used on input line 264.
+Package pdftex.def Info: Img/matriz_confusio81.png  used on input line 258.
 (pdftex.def)             Requested size: 414.04623pt x 415.10497pt.
-LaTeX Info: Redefining \. on input line 270.
-LaTeX Info: Redefining \% on input line 270.
-LaTeX Info: Redefining \. on input line 270.
-LaTeX Info: Redefining \% on input line 270.
+<Img/original_vs_lbp81.png, id=231, 489.2679pt x 715.473pt>
+File: Img/original_vs_lbp81.png Graphic file (type png)
+<use Img/original_vs_lbp81.png>
+Package pdftex.def Info: Img/original_vs_lbp81.png  used on input line 264.
+(pdftex.def)             Requested size: 414.04623pt x 605.49113pt.
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
  [17 <./Img/matriz_confusio81.png>]
-<Img/matriz_confusio162.png, id=237, 569.4876pt x 570.933pt>
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
+ [18 <./Img/original_vs_lbp81.png>]
+<Img/matriz_confusio162.png, id=244, 569.4876pt x 570.933pt>
 File: Img/matriz_confusio162.png Graphic file (type png)
 <use Img/matriz_confusio162.png>
-Package pdftex.def Info: Img/matriz_confusio162.png  used on input line 282.
+Package pdftex.def Info: Img/matriz_confusio162.png  used on input line 276.
 (pdftex.def)             Requested size: 414.04623pt x 415.10497pt.
-<Img/matriz_confusio243.png, id=238, 569.4876pt x 570.933pt>
+<Img/original_vs_lbp162.png, id=245, 489.2679pt x 715.473pt>
+File: Img/original_vs_lbp162.png Graphic file (type png)
+<use Img/original_vs_lbp162.png>
+Package pdftex.def Info: Img/original_vs_lbp162.png  used on input line 282.
+(pdftex.def)             Requested size: 414.04623pt x 605.49113pt.
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
+ [19 <./Img/matriz_confusio162.png>]
+LaTeX Info: Redefining \. on input line 289.
+LaTeX Info: Redefining \% on input line 289.
+LaTeX Info: Redefining \. on input line 289.
+LaTeX Info: Redefining \% on input line 289.
+ [20 <./Img/original_vs_lbp162.png>]
+<Img/matriz_confusio243.png, id=259, 569.4876pt x 570.933pt>
 File: Img/matriz_confusio243.png Graphic file (type png)
 <use Img/matriz_confusio243.png>
-Package pdftex.def Info: Img/matriz_confusio243.png  used on input line 301.
+Package pdftex.def Info: Img/matriz_confusio243.png  used on input line 295.
 (pdftex.def)             Requested size: 414.04623pt x 415.10497pt.
-)
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
- [18 <./Img/matriz_confusio162.png>] (Conclusiones.tex
-LaTeX Info: Redefining \. on input line 15.
-LaTeX Info: Redefining \% on input line 15.
- [19 <./Img/matriz_confusio243.png>])
+<Img/original_vs_lbp243.png, id=260, 489.2679pt x 715.473pt>
+File: Img/original_vs_lbp243.png Graphic file (type png)
+<use Img/original_vs_lbp243.png>
+Package pdftex.def Info: Img/original_vs_lbp243.png  used on input line 301.
+(pdftex.def)             Requested size: 414.04623pt x 605.49113pt.
+LaTeX Info: Redefining \. on input line 304.
+LaTeX Info: Redefining \% on input line 304.
+LaTeX Info: Redefining \. on input line 304.
+LaTeX Info: Redefining \% on input line 304.
+ [21 <./Img/matriz_confusio243.png>]) (Conclusiones.tex
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+ [22 <./Img/original_vs_lbp243.png>])
 LaTeX Info: Redefining \. on input line 143.
 LaTeX Info: Redefining \% on input line 143.
- [20] (Referencias.tex)
+ [23] (Referencias.tex)
 LaTeX Info: Redefining \. on input line 149.
 LaTeX Info: Redefining \% on input line 149.
- [21]
-runsystem(latexminted cleantemp  --timestamp 20260326232744 7790AC8DA9C360C5B286B835B98FB46A)...disabled (restricted).
+ [24]
+runsystem(latexminted cleantemp  --timestamp 20260326234443 7790AC8DA9C360C5B286B835B98FB46A)...disabled (restricted).
 
  (c:\Users\Becario\Desktop\Ibrahim Munive Ramírez\iimas\Patrones\P2\Reporte\build\Practica2.aux
 LaTeX Info: Redefining \. on input line 12.
@@ -1227,10 +1258,10 @@ Package rerunfilecheck Info: File `Practica2.out' has not changed.
 (rerunfilecheck)             Checksum: 79B3FAF559C3A45205EDD51CAA0ADA44;2083.
  ) 
 Here is how much of TeX's memory you used:
- 33425 strings out of 467871
- 669828 string characters out of 5417408
+ 33454 strings out of 467871
+ 670615 string characters out of 5417408
  1178580 words of memory out of 5000000
- 61701 multiletter control sequences out of 15000+600000
+ 61724 multiletter control sequences out of 15000+600000
  641381 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,121p,623b,575s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1238,9 +1269,9 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{P2} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Becario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Becario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "c:\Users\Becario\Desktop\Ibrahim Munive Ramírez\iimas\Patrones\P2\Reporte\build\Practica2.pdf" (21 pages, 4477340 bytes).
+Output written on "c:\Users\Becario\Desktop\Ibrahim Munive Ramírez\iimas\Patrones\P2\Reporte\build\Practica2.pdf" (24 pages, 6421919 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
