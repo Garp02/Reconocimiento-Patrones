@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  21 APR 2026 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  22 APR 2026 08:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -986,11 +986,11 @@ LaTeX Info: Redefining \% on input line 26.
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
 [4]
-<Img/01_distribucion_clases.png, id=121, 859.65166pt x 281.853pt>
+<Img/01_distribucion_clases.png, id=121, 859.5312pt x 280.8894pt>
 File: Img/01_distribucion_clases.png Graphic file (type png)
 <use Img/01_distribucion_clases.png>
 Package pdftex.def Info: Img/01_distribucion_clases.png  used on input line 27.
-(pdftex.def)             Requested size: 517.55583pt x 169.6937pt.
+(pdftex.def)             Requested size: 517.55583pt x 169.13927pt.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 33.
 
@@ -1018,11 +1018,11 @@ Overfull \hbox (48.53299pt too wide) in paragraph at lines 144--153
 []\T1/cmr/bx/n/12 SFS de \T1/cmtt/m/n/12 scikit-learn\T1/cmr/m/n/12 . Se uti-li-zó el es-ti-ma-dor \T1/cmtt/m/n/12 SequentialFeatureSelector \T1/cmr/m/n/12 con \T1/cmtt/m/n/12 n_features_to_select
  []
 
-<Img/02_sfs_curva.png, id=138, 787.38165pt x 353.76164pt>
+<Img/02_sfs_curva.png, id=138, 787.2612pt x 352.6776pt>
 File: Img/02_sfs_curva.png Graphic file (type png)
 <use Img/02_sfs_curva.png>
 Package pdftex.def Info: Img/02_sfs_curva.png  used on input line 166.
-(pdftex.def)             Requested size: 465.79709pt x 209.27354pt.
+(pdftex.def)             Requested size: 465.79709pt x 208.66992pt.
 
 
 LaTeX Info: Redefining \. on input line 172.
@@ -1030,11 +1030,11 @@ LaTeX Info: Redefining \% on input line 172.
 LaTeX Info: Redefining \. on input line 172.
 LaTeX Info: Redefining \% on input line 172.
 [7]
-<Img/03_fisher_ranking.png, id=155, 715.473pt x 426.393pt>
+<Img/03_fisher_ranking.png, id=155, 715.2321pt x 425.1885pt>
 File: Img/03_fisher_ranking.png Graphic file (type png)
 <use Img/03_fisher_ranking.png>
 Package pdftex.def Info: Img/03_fisher_ranking.png  used on input line 211.
-(pdftex.def)             Requested size: 439.92561pt x 262.17484pt.
+(pdftex.def)             Requested size: 439.92561pt x 261.52505pt.
 
 
 LaTeX Info: Redefining \. on input line 215.
@@ -1042,11 +1042,11 @@ LaTeX Info: Redefining \% on input line 215.
 LaTeX Info: Redefining \. on input line 215.
 LaTeX Info: Redefining \% on input line 215.
 [8 <./Img/02_sfs_curva.png>]
-<Img/04_fisher_topk.png, id=167, 715.473pt x 281.853pt>
+<Img/04_fisher_topk.png, id=167, 714.9912pt x 280.4076pt>
 File: Img/04_fisher_topk.png Graphic file (type png)
 <use Img/04_fisher_topk.png>
 Package pdftex.def Info: Img/04_fisher_topk.png  used on input line 218.
-(pdftex.def)             Requested size: 439.92561pt x 173.302pt.
+(pdftex.def)             Requested size: 439.92561pt x 172.53308pt.
 
 
 LaTeX Info: Redefining \. on input line 236.
@@ -1054,16 +1054,16 @@ LaTeX Info: Redefining \% on input line 236.
 LaTeX Info: Redefining \. on input line 236.
 LaTeX Info: Redefining \% on input line 236.
 [9 <./Img/03_fisher_ranking.png> <./Img/04_fisher_topk.png>]
-<Img/05_pca_varianza.png, id=175, 715.11165pt x 281.853pt>
+<Img/05_pca_varianza.png, id=175, 714.9912pt x 280.6485pt>
 File: Img/05_pca_varianza.png Graphic file (type png)
 <use Img/05_pca_varianza.png>
 Package pdftex.def Info: Img/05_pca_varianza.png  used on input line 245.
-(pdftex.def)             Requested size: 439.92561pt x 173.39232pt.
-<Img/06_pca_2d.png, id=177, 570.933pt x 426.393pt>
+(pdftex.def)             Requested size: 439.92561pt x 172.6813pt.
+<Img/06_pca_2d.png, id=177, 570.4512pt x 424.9476pt>
 File: Img/06_pca_2d.png Graphic file (type png)
 <use Img/06_pca_2d.png>
 Package pdftex.def Info: Img/06_pca_2d.png  used on input line 261.
-(pdftex.def)             Requested size: 388.16687pt x 289.90436pt.
+(pdftex.def)             Requested size: 388.16687pt x 289.16154pt.
 
 
 LaTeX Info: Redefining \. on input line 266.
@@ -1071,11 +1071,11 @@ LaTeX Info: Redefining \% on input line 266.
 LaTeX Info: Redefining \. on input line 266.
 LaTeX Info: Redefining \% on input line 266.
 [10 <./Img/05_pca_varianza.png>]
-<Img/07_matrices_confusion.png, id=188, 642.84164pt x 1004.19165pt>
+<Img/07_matrices_confusion.png, id=188, 642.2394pt x 1002.8667pt>
 File: Img/07_matrices_confusion.png Graphic file (type png)
 <use Img/07_matrices_confusion.png>
 Package pdftex.def Info: Img/07_matrices_confusion.png  used on input line 300.
-(pdftex.def)             Requested size: 398.52019pt x 622.54643pt.
+(pdftex.def)             Requested size: 398.52019pt x 622.30652pt.
 
 
 LaTeX Info: Redefining \. on input line 305.
@@ -1109,7 +1109,7 @@ LaTeX Info: Redefining \% on input line 133.
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
 [16]
-runsystem(latexminted cleantemp  --timestamp 20260421232648 C64658554B3926D3641E4C42984B9203)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260422083920 C64658554B3926D3641E4C42984B9203)...executed safely (allowed).
 
  (build/Practica3.aux
 LaTeX Info: Redefining \. on input line 12.
@@ -1134,7 +1134,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{P3} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on build/Practica3.pdf (16 pages, 1107032 bytes).
+Output written on build/Practica3.pdf (16 pages, 1521582 bytes).
 PDF statistics:
  322 PDF objects out of 1000 (max. 8388607)
  246 compressed objects within 3 object streams
