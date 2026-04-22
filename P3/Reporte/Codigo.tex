@@ -108,9 +108,11 @@ El flujo de preparación aplicado, en este orden, fue el siguiente:
     \item \textbf{Eliminar} 17 columnas constantes (varianza cero), que no
           aportan información discriminativa.
     \item \textbf{Dividir} los datos de forma estratificada en $80\%/20\%$
-          ($n_{train}=361$, $n_{test}=91$). El conjunto de prueba se
-          reservó intacto durante toda la experimentación.
-    \item \textbf{Imputar} los valores faltantes con la mediana,
+          ($n_{train}=361$, $n_{test}=91$) usando \texttt{train\_test\_split}
+          con \texttt{stratify=y} y \texttt{random\_state=43}. El conjunto de
+          prueba se reservó intacto durante toda la experimentación.
+    \item \textbf{Imputar} los valores faltantes con la mediana
+          (\texttt{SimpleImputer(strategy=\textquotesingle median\textquotesingle)}),
           ajustando el imputador solo sobre \textit{train}.
     \item \textbf{Escalar} con \textit{z-score}, nuevamente ajustando
           media y desviación solo en \textit{train} y aplicando la
@@ -125,8 +127,10 @@ varianzas.
 \subsection{Implementación de los métodos}
 
 Como clasificador base para todas las evaluaciones se empleó un \textbf{SVM
-    lineal} (\texttt{LinearSVC}, $C=1.0$). La validación cruzada fue $5$-fold
-estratificada. El baseline con las 261 características originales alcanzó
+    lineal} (\texttt{LinearSVC}, $C=1.0$, \texttt{dual=\textquotesingle auto\textquotesingle},
+\texttt{max\_iter=5000}, \texttt{random\_state=43}). La validación cruzada fue $5$-fold
+estratificada (\texttt{StratifiedKFold}, \texttt{n\_splits=5}, \texttt{shuffle=True},
+\texttt{random\_state=43}). El baseline con las 261 características originales alcanzó
 una exactitud en CV de $0.6731 \pm 0.0452$.
 
 \subsubsection*{Búsqueda Secuencial hacia delante (SFS)}
@@ -163,7 +167,7 @@ el resultado final de \texttt{sklearn}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Img/02_sfs_curva.png}
+    \includegraphics[width=1\textwidth]{Img/02_sfs_curva.png}
     \caption{SFS con \textit{early stopping}: curva de aprendizaje de la
         implementación manual y comparación con el resultado de
         \texttt{SequentialFeatureSelector} de \texttt{scikit-learn}.}
@@ -208,14 +212,14 @@ $k$ mejores atributos.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Img/03_fisher_ranking.png}
+    \includegraphics[width=1\textwidth]{Img/03_fisher_ranking.png}
     \caption{20 características con mayor Fisher Score.}
     \label{fig:fisher-ranking}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Img/04_fisher_topk.png}
+    \includegraphics[width=1\textwidth]{Img/04_fisher_topk.png}
     \caption{Exactitud en CV en función del número de características top-$k$
         seleccionadas por Fisher Score.}
     \label{fig:fisher-topk}
@@ -242,7 +246,7 @@ componentes la exactitud de CV fue $0.6949 \pm 0.0841$.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{Img/05_pca_varianza.png}
+    \includegraphics[width=1\textwidth]{Img/05_pca_varianza.png}
     \caption{Varianza explicada acumulada por PCA. Se requieren 94
         componentes para superar el umbral del $95\%$.}
     \label{fig:pca-varianza}
@@ -258,7 +262,7 @@ varianza.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{Img/06_pca_2d.png}
+    \includegraphics[width=1\textwidth]{Img/06_pca_2d.png}
     \caption{Proyección 2D de los datos de entrenamiento sobre las dos
         primeras componentes principales.}
     \label{fig:pca-2d}
@@ -297,7 +301,7 @@ confusión.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.77\textwidth]{Img/07_matrices_confusion.png}
+    \includegraphics[width=0.78\textwidth]{Img/07_matrices_confusion.png}
     \caption{Matrices de confusión sobre el conjunto de prueba para cada
         método.}
     \label{fig:confusion}

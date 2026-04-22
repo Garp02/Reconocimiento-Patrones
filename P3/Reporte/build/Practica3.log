@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  22 APR 2026 08:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  22 APR 2026 10:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1006,110 +1006,118 @@ Overfull \hbox (7.89711pt too wide) in paragraph at lines 80--89
 
 
 
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
 [6]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 144.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 148.
 
-Overfull \hbox (48.53299pt too wide) in paragraph at lines 144--153
+Overfull \hbox (48.53299pt too wide) in paragraph at lines 148--157
 []\T1/cmr/bx/n/12 SFS de \T1/cmtt/m/n/12 scikit-learn\T1/cmr/m/n/12 . Se uti-li-zó el es-ti-ma-dor \T1/cmtt/m/n/12 SequentialFeatureSelector \T1/cmr/m/n/12 con \T1/cmtt/m/n/12 n_features_to_select
  []
 
 <Img/02_sfs_curva.png, id=138, 787.2612pt x 352.6776pt>
 File: Img/02_sfs_curva.png Graphic file (type png)
 <use Img/02_sfs_curva.png>
-Package pdftex.def Info: Img/02_sfs_curva.png  used on input line 166.
-(pdftex.def)             Requested size: 465.79709pt x 208.66992pt.
+Package pdftex.def Info: Img/02_sfs_curva.png  used on input line 170.
+(pdftex.def)             Requested size: 517.55583pt x 231.85309pt.
 
 
-LaTeX Info: Redefining \. on input line 172.
-LaTeX Info: Redefining \% on input line 172.
-LaTeX Info: Redefining \. on input line 172.
-LaTeX Info: Redefining \% on input line 172.
-[7]
-<Img/03_fisher_ranking.png, id=155, 715.2321pt x 425.1885pt>
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+[7{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+LaTeX Info: Redefining \. on input line 212.
+LaTeX Info: Redefining \% on input line 212.
+LaTeX Info: Redefining \. on input line 212.
+LaTeX Info: Redefining \% on input line 212.
+[8 <./Img/02_sfs_curva.png>]
+<Img/03_fisher_ranking.png, id=164, 715.2321pt x 425.1885pt>
 File: Img/03_fisher_ranking.png Graphic file (type png)
 <use Img/03_fisher_ranking.png>
-Package pdftex.def Info: Img/03_fisher_ranking.png  used on input line 211.
-(pdftex.def)             Requested size: 439.92561pt x 261.52505pt.
-
-
-LaTeX Info: Redefining \. on input line 215.
-LaTeX Info: Redefining \% on input line 215.
-LaTeX Info: Redefining \. on input line 215.
-LaTeX Info: Redefining \% on input line 215.
-[8 <./Img/02_sfs_curva.png>]
-<Img/04_fisher_topk.png, id=167, 714.9912pt x 280.4076pt>
+Package pdftex.def Info: Img/03_fisher_ranking.png  used on input line 215.
+(pdftex.def)             Requested size: 517.55583pt x 307.69257pt.
+<Img/04_fisher_topk.png, id=165, 714.9912pt x 280.4076pt>
 File: Img/04_fisher_topk.png Graphic file (type png)
 <use Img/04_fisher_topk.png>
-Package pdftex.def Info: Img/04_fisher_topk.png  used on input line 218.
-(pdftex.def)             Requested size: 439.92561pt x 172.53308pt.
+Package pdftex.def Info: Img/04_fisher_topk.png  used on input line 222.
+(pdftex.def)             Requested size: 517.55583pt x 202.98865pt.
 
 
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
 [9 <./Img/03_fisher_ranking.png> <./Img/04_fisher_topk.png>]
-<Img/05_pca_varianza.png, id=175, 714.9912pt x 280.6485pt>
+<Img/05_pca_varianza.png, id=176, 714.9912pt x 280.6485pt>
 File: Img/05_pca_varianza.png Graphic file (type png)
 <use Img/05_pca_varianza.png>
-Package pdftex.def Info: Img/05_pca_varianza.png  used on input line 245.
-(pdftex.def)             Requested size: 439.92561pt x 172.6813pt.
-<Img/06_pca_2d.png, id=177, 570.4512pt x 424.9476pt>
+Package pdftex.def Info: Img/05_pca_varianza.png  used on input line 249.
+(pdftex.def)             Requested size: 517.55583pt x 203.16304pt.
+<Img/06_pca_2d.png, id=178, 570.4512pt x 424.9476pt>
 File: Img/06_pca_2d.png Graphic file (type png)
 <use Img/06_pca_2d.png>
-Package pdftex.def Info: Img/06_pca_2d.png  used on input line 261.
-(pdftex.def)             Requested size: 388.16687pt x 289.16154pt.
+Package pdftex.def Info: Img/06_pca_2d.png  used on input line 265.
+(pdftex.def)             Requested size: 517.55583pt x 385.54872pt.
 
 
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
 [10 <./Img/05_pca_varianza.png>]
-<Img/07_matrices_confusion.png, id=188, 642.2394pt x 1002.8667pt>
+
+LaTeX Info: Redefining \. on input line 301.
+LaTeX Info: Redefining \% on input line 301.
+LaTeX Info: Redefining \. on input line 301.
+LaTeX Info: Redefining \% on input line 301.
+[11 <./Img/06_pca_2d.png>]
+<Img/07_matrices_confusion.png, id=196, 642.2394pt x 1002.8667pt>
 File: Img/07_matrices_confusion.png Graphic file (type png)
 <use Img/07_matrices_confusion.png>
-Package pdftex.def Info: Img/07_matrices_confusion.png  used on input line 300.
-(pdftex.def)             Requested size: 398.52019pt x 622.30652pt.
+Package pdftex.def Info: Img/07_matrices_confusion.png  used on input line 304.
+(pdftex.def)             Requested size: 403.69292pt x 630.38625pt.
 
 
-LaTeX Info: Redefining \. on input line 305.
-LaTeX Info: Redefining \% on input line 305.
-LaTeX Info: Redefining \. on input line 305.
-LaTeX Info: Redefining \% on input line 305.
-[11{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./Img/06_pca_2d.png>]
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+[12]
+Overfull \vbox (4.51279pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 315.
-LaTeX Info: Redefining \% on input line 315.
-LaTeX Info: Redefining \. on input line 315.
-LaTeX Info: Redefining \% on input line 315.
-[12 <./Img/07_matrices_confusion.png>]
 
-LaTeX Info: Redefining \. on input line 365.
-LaTeX Info: Redefining \% on input line 365.
-LaTeX Info: Redefining \. on input line 365.
-LaTeX Info: Redefining \% on input line 365.
-[13]) (./Conclusiones.tex
+
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+[13 <./Img/07_matrices_confusion.png>]
+
+LaTeX Info: Redefining \. on input line 369.
+LaTeX Info: Redefining \% on input line 369.
+LaTeX Info: Redefining \. on input line 369.
+LaTeX Info: Redefining \% on input line 369.
+[14]) (./Conclusiones.tex
 
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
-[14])
+[15])
 
 LaTeX Info: Redefining \. on input line 133.
 LaTeX Info: Redefining \% on input line 133.
-[15] (./Referencias.tex)
+[16] (./Referencias.tex)
 
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
-[16]
-runsystem(latexminted cleantemp  --timestamp 20260422083920 C64658554B3926D3641E4C42984B9203)...executed safely (allowed).
+[17]
+runsystem(latexminted cleantemp  --timestamp 20260422100102 C64658554B3926D3641E4C42984B9203)...executed safely (allowed).
 
  (build/Practica3.aux
 LaTeX Info: Redefining \. on input line 12.
@@ -1123,21 +1131,21 @@ Package rerunfilecheck Info: File `Practica3.out' has not changed.
 (rerunfilecheck)             Checksum: 7659782BF4F5ECAB915DC4878C84A164;2962.
  ) 
 Here is how much of TeX's memory you used:
- 31071 strings out of 473197
- 599814 string characters out of 5718604
+ 31075 strings out of 473197
+ 599862 string characters out of 5718604
  1110776 words of memory out of 5000000
- 53739 multiletter control sequences out of 15000+600000
- 572193 words of font info for 71 fonts, out of 8000000 for 9000
+ 53741 multiletter control sequences out of 15000+600000
+ 572490 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,12n,93p,620b,765s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{P3} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on build/Practica3.pdf (16 pages, 1521582 bytes).
+Output written on build/Practica3.pdf (17 pages, 1516337 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 71 named destinations out of 1000 (max. 500000)
+ 329 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
