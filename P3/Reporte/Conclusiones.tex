@@ -1,0 +1,31 @@
+Comparando distintos enfoques de selección y reducción de dimensionalidad sobre
+de clasificación médica, se lograron contrastar sus principios teóricos con su
+desempeño práctico.
+
+La distribución original de 16 clases incluye categorías con muestras de 2 a 5,
+lo cual impide una validación significativa. Así, mediante la reformulación
+binaria, casi se balancearon los casos. Y de esta manera no se necesitó aplicar
+alguna técnica de sobremuestreo o remuestreo.
+
+En validación cruzada, SFS fue superior ($0.778$), pero en prueba Fisher obtuvo
+la mejor exactitud ($0.758$) y AUC ($0.764$).
+
+
+El \textbf{Fisher Score} ofreció un ranking coherente con SFS
+en su característica más importante (\texttt{qrs\_duration}).
+
+Por otro lado, \textbf{PCA} no selecciona variables originales, las recombina.
+La proyección 2D mostró que las direcciones de máxima varianza no coinciden con
+las que discriminan las clases, es decir tiene desempeño predictivo.
+
+La diferencia observada entre la exactitud en validación cruzada y la
+exactitud en prueba (especialmente en SFS, $0.778$ vs $0.714$) se debe a la
+poca variabilidad de las muestras pequeñas, por ejemplo, $n = 91$.
+
+Finalmente, la eliminación de columnas constantes, imputación, escalado
+\textit{z-score} y eliminación de correlaciones para PCA tuvo un impacto
+comparable al de la elección del método de selección. Ningún algoritmo compensa
+datos mal preparados, y en problemas médicos como este la calidad inicial es
+tan determinante como el modelo final.
+
+\QED

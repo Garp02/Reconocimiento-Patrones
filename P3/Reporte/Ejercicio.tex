@@ -1,0 +1,64 @@
+\subsection{Selección de Características}
+
+Utiliza alguno de los conuntos de datos propuestos:
+
+\textbf{Arritmia.}  ($Arrhythmia$ $Database$ $UCI$ $Machine$ $Learning$ $Repository$), el objetivo de este conjunto de datos es
+diferenciar entre arritmias cardíacas y clasificarlas en uno de los 16 grupos. La clase 01 agrupa a las señales de electrocardiograma
+(ECG) 'normales', del 02 al 15 a diferentes clases de arritmias y la clase 16 al resto de las señales ECG de arritmias no clasificadas.
+Cuenta con 452 muestras, 279 características, 206 de las cuales son de valores cuantitativos y el resto cualitativos.
+
+\textbf{Expresión genética en pacientes con leucemia} ($Gene$ $expression$ $dataset$ $from$ $Golub$ $et$ $al.$ $(1999)$),
+este conjunto de datos consta de 47 pacientes con leucemia linfoblástica aguda (LLA) y 25 pacientes con leucemia mieloide aguda
+(LMA). A cada uno de los 72 pacientes se le extrajeron muestras de médula ósea al momento del diagnóstico, las mediciones de expresión
+génica de las muestras resultaron en 7129 características que representan los niveles de expresión de genes para cada muestra. Este
+conjunto de datos tiene una alta dimensión con pocas muestras, valores con ruido y posible desbalance de clases.
+
+\begin{enumerate}
+    \item Verificar la integridad del conjunto de datos desde valores faltantes, clases minoritarias con muy pocas muestras, datos
+          atípicos y escalas de datos diferentes (algunas características son frecuencias, otras voltajes).
+
+    \item{Preparación de Datos}
+          \begin{enumerate}
+              \item Detectar valores faltantes y completarlos si es el caso.
+              \item  Aplicar escaladores para remover o mitigar el efecto de muestras atípicas (por ejemplo z-score).
+              \item  Aplicar técnicas para corregir desbalanceos (como sobremuestreo de la clase minoritaria).
+              \item Implementar validación cruzada para evaluar cada método de selección manteniendo un conjunto de prueba separado.
+              \item  Dividir los datos (80\% entrenamiento / 20\% prueba) sin incluir los datos de prueba en la optimización de parámetros.
+          \end{enumerate}
+
+    \item{Implementación de Métodos}
+          \begin{enumerate}
+              \item \textbf{Búsqueda Secuencial hacia delante (SFS)}
+                    \begin{itemize}
+                        \item SFS con validación cruzada e interrupción temprana ($early$ $stopping$) si la exactitud no mejora en 3 iteraciones.
+                        \item Generar gráfico exactitud por características (20 mejores características).
+                    \end{itemize}
+
+              \item \textbf{Fisher}
+                    \begin{itemize}
+                        \item Implementar función del cálculo  Score de separabilidad entre clases.
+                        \item Calcular puntuaciones de relevancia de cada característica.
+                        \item Selecciona las 20 características con mayor puntuación.
+                    \end{itemize}
+
+              \item \textbf{PCA}
+                    \begin{itemize}
+                        \item Remover pares de características altamente correlacionadas (coeficiente $>$ 0.9).
+                        \item Determinar componentes para 95\% varianza.
+                        \item Visualizar proyección 2D.
+                    \end{itemize}
+          \end{enumerate}
+
+    \item{Análisis de resultados}
+          \begin{enumerate}
+              \item ¿Qué método obtuvo mejor exactitud? ¿Por qué?.
+
+              \item ¿Qué método es más robusto ante outliers y desbalanceo?
+
+              \item ¿Cómo afecta la correlación entre características al PCA?.
+
+              \item ¿Qué ventajas tiene Fisher Score sobre SFS en términos computacionales?.
+          \end{enumerate}
+\end{enumerate}
+
+
