@@ -1,0 +1,176 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+% \documentclass{article}
+% \usepackage[english]{babel} % To obtain English text with the blindtext package
+% \usepackage{blindtext}
+
+\title{Practica 4: Clasificadores}
+\author{Dra. María Elena Martínez Perez \\
+M. en C. Miguel Ángel Veloz Lucas}
+\date{29 de abril de 2026}
+
+\begin{document}
+
+\maketitle
+\section{Reglas generales para el desarrollo de las Prácticas de Laboratorio}
+
+\begin{itemize}
+\item Deberás respetar la estructura general de este documento, i.e, entregar tu práctica con las secciones: objetivos, introducción, desarrollo, código, conclusiones y referencias.
+\item El desarrollo de la práctica deberá ser auténtico. Aquellos equipos que presenten los mismos cálculos, código fuente, etcétera, serán sancionados.
+\item El día de entrega establecido deberá ser respetado por todos los equipos. La hora límite de entrega es la hora de clase y no se reciben trabajos que sean terminados durante la hora de clase.
+\item  Deberás entregar el documento en el classroom antes de la fecha límite.
+\end{itemize}
+
+\section{Objetivos}
+
+    En esta práctica avanzaremos en el uso de cuatro clasificadores supervisados sobre distintos conjuntos de datos. Cada ejercicio incluye:
+\begin{itemize}
+
+    \item Preprocesamiento de datos.
+    \item Reducción de dimensionalidad PCA y visualización en 2D/3D.
+    \item Búsqueda e interpretación de hiperparámetros.
+    \item Análisis de resultados.
+    
+\end{itemize}
+
+\section{Introducción}
+
+\subsection{Tipos de Clasificadores para Reconocimiento de \\Patrones}
+El reconocimiento de patrones es una disciplina fundamental en inteligencia artificial y aprendizaje automático, cuyo objetivo es identificar regularidades o estructuras en datos para asignarles categorías. Los clasificadores son algoritmos que implementan esta tarea, y su elección depende de factores como la naturaleza de los datos, la complejidad del problema y la necesidad de interpretabilidad. A continuación, se describen los principales tipos de clasificadores y sus características.
+
+\subsection{Clasificadores No Lineales}
+Cuando los datos presentan relaciones complejas, se emplean modelos no lineales. Los árboles de decisión son un ejemplo: dividen recursivamente el espacio de características mediante reglas jerárquicas, lo que los hace interpretables pero propensos al sobreajuste. Otro enfoque es el algoritmo k-vecinos más cercanos (kNN), que clasifica instancias según la mayoría de clases entre sus vecinos más cercanos. Aunque es flexible y no requiere entrenamiento explícito, su costo computacional crece con el tamaño de los datos. Estos métodos son útiles en reconocimiento de escritura manual o sistemas de recomendación basados en similitud.
+\subsection{Clasificadores Probabilísticos}
+Basados en teoría de probabilidad, estos modelos estiman distribuciones para predecir clases. El clasificador Naive Bayes es el más conocido: asume independencia entre características y aplica el teorema de Bayes para calcular probabilidades. Aunque simplista, es eficaz en datos categóricos o textuales, como en análisis de sentimientos o detección de spam. Las redes Bayesianas, por otro lado, modelan dependencias entre variables, ofreciendo mayor flexibilidad a costa de complejidad.
+\subsection{Máquinas de Soporte Vectorial (SVM)}
+Las SVM buscan hiperplanos óptimos para separar clases, incluso en espacios de alta dimensión. En su versión lineal, maximizan el margen entre clases, mientras que con \textit{kernels} transforman los datos a espacios donde la separación no lineal es posible. Son eficaces en reconocimiento facial o clasificación de imágenes médicas, pero requieren ajuste de parámetros y normalización de datos.
+\subsection{Redes Neuronales}
+Estos modelos, inspirados en el cerebro humano, destacan por su capacidad para aprender patrones complejos. Los perceptrones multicapa (MLP) son redes \textit{feed-forward} con capas ocultas no lineales, mientras que las redes convolucionales (CNN) se especializan en datos \textit{grid-like} (como imágenes). Las redes recurrentes (RNN) manejan secuencias (texto, series temporales). Aunque son extremadamente poderosas (ej. en visión por computadora o traducción automática), requieren grandes volúmenes de datos, recursos computacionales y carecen de interpretabilidad.
+
+
+
+
+
+\section{Desarrollo}
+\begin{large}
+\textbf{Ejercicio: Aplicación y comparación de clasificadores.}
+\end{large}
+\\\\
+Selecciona tres conjuntos de datos para entrenar distintos modelos de clasificación variando la configuración de sus hiperparámetros.
+\\\\
+ Conjunto de datos propuesto:
+\begin{itemize}
+    \item Clasificación Multimodelo para Cáncer de Mama ( \href{https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic}{\textit{Breast Cancer Wisconsin Diagnostic}}): Conjunto de datos biomédicos que contiene características numéricas derivadas de imágenes digitales de aspiraciones con aguja fina (FNA) de masas mamarias, utilizadas para clasificar tumores como benignos o malignos.
+    \item Detección Temprana de Parkinson, voz y biomarcadores acústicos (\href{https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring}{\textit{Breast Parkinsons Telemonitoring}}): Es un conjunto de datos diseñado para apoyar la investigación en el diagnóstico del enfermedad de Parkinson. Contiene medidas biomédicas de voz obtenidas de personas sanas y pacientes con la enfermedad, con el objetivo de diferenciar entre ambos grupos mediante técnicas de aprendizaje automático.
+    \item Clasificación de Cardiopatía (\href{https://archive.ics.uci.edu/dataset/45/heart+disease}{ \textit{Heart Disease}}): Este conjunto de datos recopila información de pacientes para determinar la probabilidad de enfermedad cardíaca, codificada en una variable objetivo que indica la presencia o ausencia de la condición. Entre las variables predictoras se incluyen edad, sexo, presión arterial en reposo, nivel de colesterol, frecuencia cardíaca máxima y resultados de pruebas electrocardiográficas.
+    \item Verificador de síntomas de COVID-19 (\href{https://www.kaggle.com/datasets/iamhungundji/covid19-symptoms-checker}{\textit{COVID Symptom Classification Dataset}}): Los datos identifican si una persona padece o no la enfermedad del coronavirus, basándose en algunos síntomas estándar predefinidos. Dichos síntomas se basan en las directrices de la Organización Mundial de la Salud (OMS) y del Ministerio de Salud y Bienestar Familiar de la India.    
+\end{itemize} 
+
+\\\\
+\begin{enumerate}
+  \item \textbf{Carga y análisis de datos:} 
+    \begin{enumerate}
+      \item Cargar el conjunto de datos.
+      \item Visualización de la distribución de clases.
+      \item Análisis de valores faltantes (porcentaje de valores faltantes por columna).
+     
+    \end{enumerate}
+  \item \textbf{Preprocesamiento y limpieza:}
+    \begin{enumerate}
+    \item Separación de tipos de variables (Identificamos columnas numéricas y categóricas).
+    \item Verificar y aplicar limpieza de datos (faltantes, \textit{outliers}, caracteres inválidos, etc.).
+    
+      \item Estandarización de características (escaladores).
+      \item Separación en 70\% entrenamiento y 30\% prueba.
+      \item Manejo del desbalance de clases  sobre el conjunto de entrenamiento (por ejemplo SMOTE, ADASYN o Sobremuestreo aleatorio).
+      \item Visualización  de la distribución.
+    \end{enumerate}
+ \item \textbf{Reducción de dimensionalidad por análisis de componentes principales (PCA):}
+    \begin{enumerate}
+        \item Aplicar PCA a los datos balanceados.
+        \item Cálculo de la varianza acumulada.
+        \item Encontrar el número de componentes para el 95\% de varianza.
+        \item Gráfico del número de componentes principales y varianza acumulada.
+    \end{enumerate}
+
+\item \textbf{Definición de modelos, esquema de trabajo y búsqueda en cuadrícula (grid search):}
+\begin{enumerate}
+    \item Desarrollar un esquema de funciones (\textit{pipelines} ) que integren el preprocesamiento y el clasificador.
+\item La búsqueda en cuadrícula nos permitirá encontrar los mejores hiperparámetros. Este método consiste en especificar una lista de posibles valores para cada hiperparámetro y luego entrenar el modelo para cada combinación de estos valores. Se evalúa el rendimiento de cada modelo y se selecciona la combinación de hiperparámetros que da el mejor rendimiento. Este método es exhaustivo y puede resultar computacionalmente costoso, especialmente cuando se trata con un gran número de hiperparámetros o un gran número de datos.
+\end{enumerate}
+    
+  \item \textbf{Configuración de modelos y cuadro de hiperparámetros}
+    \begin{enumerate}
+      \item Modelo de KNN:
+      \begin{itemize}
+          \item vecinos (1,3,5,7,9).
+          \item pesos (\textit{weights: ['uniform', 'distance']}).
+          \item distancia (\textit{metric:['euclidean', 'manhattan']}).
+      \end{itemize} 
+      \item Modelo de árbol de decisión  
+      \begin{itemize}
+          \item profundidad ( \textit{[3, 5, 7, None]}).
+          \item número mínimo de muestras por división (\textit{samples split: [2, 5, 10]}).
+          \item criterio de división (\textit{criterion': ['gini', 'entropy']}).
+      \end{itemize}
+
+      \item Modelo de SVM  
+      \begin{itemize}
+          \item kernel ( \textit{['linear', 'rbf']}).
+          \item Regularización C (0.1, 1, 10).
+          \item Gamma (\textit{['scale', 'auto', 0.01, 0.1]}).
+      \end{itemize}
+  
+    \end{enumerate}
+     \item \textbf{Entrenamiento, evaluación y comparación de resultados: }
+    \begin{enumerate}
+      \item Mejores métricas de rendimiento sobre conjunto de prueba por conjunto de datos.
+      \item Matriz de confusión de los modelos entrenados con las mejores métricas.
+      \item Mostrar las fronteras de decisión superponiendo datos de entrenamiento y prueba.
+      \item Mostrar el árbol entrenado con los mejores parámetros.
+      \item Comparar exactitud entre modelos.
+      \item ¿Qué hiperparámetro fue más relevante por modelo para cada conjunto de datos?
+    \end{enumerate}
+
+    
+
+\end{enumerate}
+
+\bigskip
+
+
+%\section{Conclusión}
+%El descriptor LBP es eficaz para capturar patrones locales en texturas. Su implementación en MATLAB permite integrarse fácilmente en flujos de trabajo de reconocimiento de patrones.
+
+\section{Código}
+En esta sección deberás presentar el código fuente del programa que hayas escrito.
+\section{Conclusiones}
+En esta sección deberás escribir las conclusiones a las que hayas llegado una vez terminada la práctica.
+\section{Referencias}
+
+    \begin{itemize}
+        \item Tolstikhin, Ilya O., et al. \textit{Mlp-mixer: An all-mlp architecture for vision}. Advances in neural information processing systems 34 (2021): 24261-24272.
+        \item Wu, Baoyuan, et al. \textit{Defenses in adversarial machine learning: A survey}. arXiv preprint arXiv:2312.08890 (2023).
+        \item Liu, Xiao, et al. \textit{Self-supervised learning: Generative or contrastive}. IEEE transactions on knowledge and data engineering 35.1 (2021): 857-876.
+        \item Goodfellow, Ian. \textit{Deep learning.} (2016).
+        \item Murphy, Kevin P. \textit{Machine learning: a probabilistic perspective}. MIT press, 2012.
+        \item Wolberg, W., Mangasarian, O., Street, N., & Street, W. (1993). Breast Cancer Wisconsin (Diagnostic) [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5DW2B.
+        \item Tsanas, A. & Little, M. (2009). Parkinsons Telemonitoring [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5ZS3N.
+        \item Janosi, A., Steinbrunn, W., Pfisterer, M., & Detrano, R. (1989). Heart Disease [Dataset]. UCI Machine Learning Repository. \\ https://doi.org/10.24432/C52P4X.
+        \item COVID Symptom Classification [Dataset]. (2021) Kaggle Repository \\ https://www.kaggle.com/datasets/iamhungundji/covid19-symptoms-checker.
+        
+        
+    \end{itemize}
+
+\end{enumerate}
+
+
+\end{document}
+
+
+
