@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1778722307.07708 "/home/ibra/IIMAS/Sexto/Reconocimiento de Patrones/Prácticas/P4/Reporte/Practica4.tex" "build/Practica4.pdf" "Practica4" 1778722315.984 0
+["pdflatex"] 1778730005.62057 "/home/ibra/IIMAS/Sexto/Reconocimiento de Patrones/Prácticas/P4/Reporte/Practica4.tex" "build/Practica4.pdf" "Practica4" 1778730017.48013 0
   "/etc/texmf/web2c/texmf.cnf" 1765955496.61123 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/ibra/IIMAS/Sexto/Reconocimiento de Patrones/Prácticas/P4/Reporte/Practica4.tex" 1778722195.0362 3496 41cc309bbeecafd49738dfe6c816774b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -215,10 +215,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765955520 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1765955584 3348250 33fb68348f0b57e52023f8c361681ff0 ""
-  "Codigo.tex" 1778743612 30704 522e360ac42095b24af93562623ccf23 ""
+  "Codigo.tex" 1778730005.23587 32480 ceb032238fd6d607ce98c1ae5c5e9916 ""
   "Conclusiones.tex" 1778743612 3437 1b8edfcbbd26f8da5dfda2c781e41982 ""
   "Ejercicio.tex" 1778743612 6065 b2d23202775379d37c43a0059f42bc30 ""
   "Img/01_boxplot_cancer_Características_Medias.png" 1778695668.54924 292738 a474745d420eaad14e2b65c373117354 ""
+  "Img/01_boxplot_cancer_Error_Estándar.png" 1778695670.23724 291613 53acccf1f33319df5c9843b253bf4266 ""
   "Img/01_boxplot_cancer_Valores_Extremos.png" 1778695671.45724 283533 608e50a6bf8a1e768055e2079e9de45b ""
   "Img/02_distribucion_smote_cancer.png" 1778695672.42124 103421 270fc839980da19296b030dc1fbc5e8d ""
   "Img/03_varianza_acumulada_pesea_mle.png" 1778695673.05723 159164 f485f1e674cb038b5c45d6b44fe2ac87 ""
@@ -249,8 +250,8 @@
   "Portada.tex" 1778722300.72887 1082 746b5ff7f89087616a04cc74b35ca80b ""
   "Practica4.tex" 1778722195.0362 3496 41cc309bbeecafd49738dfe6c816774b ""
   "Referencias.tex" 1778743612 1819 65bee28baf430aed9155ac3a505bb8a9 ""
-  "build/Practica4.aux" 1778722315.84946 11215 6a55d2961f0ea5de99bdd760c9a1a61c "pdflatex"
-  "build/Practica4.out" 1778722315.85346 3270 689244ded132d581965444c541326db5 "pdflatex"
+  "build/Practica4.aux" 1778730017.3461 11954 f581f5176223098b7a28d1d8237bcfa3 "pdflatex"
+  "build/Practica4.out" 1778730017.35011 3270 689244ded132d581965444c541326db5 "pdflatex"
   (generated)
   "build/Practica4.aux"
   "build/Practica4.log"

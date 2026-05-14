@@ -66,7 +66,8 @@ corresponden a tumores efectivamente agresivos (información biológica
 legítima, no errores de medición) y, al aplicar después un escalado
 \textit{z-score}, su impacto sobre los modelos se atenúa.
 
-Los \textit{boxplots} de la Figura~\ref{fig:cancer-boxplots} comparan las
+Los \textit{boxplots} de las Figura~\ref{fig:cancer-boxplots-mean},
+\ref{fig:cancer-boxplots-se} y \ref{fig:cancer-boxplots-worst} comparan las
 distribuciones \textit{Benigno} vs \textit{Maligno} para los tres grupos
 de variables. Se aprecia visualmente que los tumores malignos tienden a
 producir valores sistemáticamente mayores en casi todas las características
@@ -76,12 +77,25 @@ muestran solapamiento más marcado.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{Img/01_boxplot_cancer_Características_Medias.png}
-    \\[2mm]
-    \includegraphics[width=0.95\textwidth]{Img/01_boxplot_cancer_Valores_Extremos.png}
-    \caption{\textit{Boxplots} comparativos para los grupos de
-        características \textit{mean} (arriba) y \textit{worst} (abajo)
+    \caption{\textit{Boxplots} comparativos del grupo de características \textit{mean}
         del conjunto Cancer. Escala logarítmica.}
-    \label{fig:cancer-boxplots}
+    \label{fig:cancer-boxplots-mean}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Img/01_boxplot_cancer_Error_Estándar.png}
+    \caption{\textit{Boxplots} comparativos del grupo de características \textit{se}
+        del conjunto Cancer. Escala logarítmica.}
+    \label{fig:cancer-boxplots-se}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Img/01_boxplot_cancer_Valores_Extremos.png}
+    \caption{\textit{Boxplots} comparativos del grupo de características \textit{worst}
+        del conjunto Cancer. Escala logarítmica.}
+    \label{fig:cancer-boxplots-worst}
 \end{figure}
 
 \subsubsection*{Preprocesamiento, partición y SMOTE}
@@ -164,16 +178,16 @@ Tabla~\ref{tab:cancer-resultados}.
     \begin{tabular}{lccccc}
         \toprule
         \rowcolor{headerblue}
-        \textcolor{headertext}{\textbf{Modelo}} &
+        \textcolor{headertext}{\textbf{Modelo}}                  &
         \textcolor{headertext}{\textbf{Mejores hiperparámetros}} &
-        \textcolor{headertext}{\textbf{CV Acc.}} &
-        \textcolor{headertext}{\textbf{Test Acc.}} &
-        \textcolor{headertext}{\textbf{Recall}} &
-        \textcolor{headertext}{\textbf{F1}}                                                                                                  \\
+        \textcolor{headertext}{\textbf{CV Acc.}}                 &
+        \textcolor{headertext}{\textbf{Test Acc.}}               &
+        \textcolor{headertext}{\textbf{Recall}}                  &
+        \textcolor{headertext}{\textbf{F1}}                                                                                                                                            \\
         \midrule
-        KNN               & $k=9$, \textit{distance}, euclidean & $0.9860$          & $0.9532$          & $0.9688$          & $0.9394$          \\
-        Árbol de Decisión & gini, depth$=5$, split$=5$          & $0.9500$          & $0.9474$          & $0.9375$          & $0.9302$          \\
-        SVM               & lineal, $C=1$, $\gamma=$scale       & $\mathbf{0.9740}$ & $\mathbf{0.9766}$ & $\mathbf{0.9844}$ & $\mathbf{0.9692}$ \\
+        KNN                                                      & $k=9$, \textit{distance}, euclidean & $0.9860$          & $0.9532$          & $0.9688$          & $0.9394$          \\
+        Árbol de Decisión                                        & gini, depth$=5$, split$=5$          & $0.9500$          & $0.9474$          & $0.9375$          & $0.9302$          \\
+        SVM                                                      & lineal, $C=1$, $\gamma=$scale       & $\mathbf{0.9740}$ & $\mathbf{0.9766}$ & $\mathbf{0.9844}$ & $\mathbf{0.9692}$ \\
         \bottomrule
     \end{tabular}
     \caption{Resultados de los tres clasificadores sobre Cancer. El SVM
@@ -272,13 +286,13 @@ Tabla~\ref{tab:cancer-hiperparametros}.
     \begin{tabular}{lll}
         \toprule
         \rowcolor{headerblue}
-        \textcolor{headertext}{\textbf{Modelo}} &
+        \textcolor{headertext}{\textbf{Modelo}}                       &
         \textcolor{headertext}{\textbf{Hiperparámetro más relevante}} &
-        \textcolor{headertext}{\textbf{$\Delta$ accuracy}}                    \\
+        \textcolor{headertext}{\textbf{$\Delta$ accuracy}}                                            \\
         \midrule
-        KNN               & \texttt{weights}   & $0.0110$ \\
-        Árbol de Decisión & \texttt{criterion} & $0.0112$ \\
-        SVM               & \texttt{C}         & $0.0152$ \\
+        KNN                                                           & \texttt{weights}   & $0.0110$ \\
+        Árbol de Decisión                                             & \texttt{criterion} & $0.0112$ \\
+        SVM                                                           & \texttt{C}         & $0.0152$ \\
         \bottomrule
     \end{tabular}
     \caption{Hiperparámetro más sensible por modelo sobre Cancer.}
@@ -325,21 +339,21 @@ globales y por hospital.
     \begin{tabular}{lcccc}
         \toprule
         \rowcolor{headerblue}
-        \textcolor{headertext}{\textbf{Variable}} &
-        \textcolor{headertext}{\textbf{Global (\%)}} &
-        \textcolor{headertext}{\textbf{Hungarian (\%)}} &
+        \textcolor{headertext}{\textbf{Variable}}         &
+        \textcolor{headertext}{\textbf{Global (\%)}}      &
+        \textcolor{headertext}{\textbf{Hungarian (\%)}}   &
         \textcolor{headertext}{\textbf{Switzerland (\%)}} &
-        \textcolor{headertext}{\textbf{VA (\%)}}                                        \\
+        \textcolor{headertext}{\textbf{VA (\%)}}                                              \\
         \midrule
-        \texttt{ca}       & $66.4$ & $99.0$ & $95.9$ & $99.0$ \\
-        \texttt{thal}     & $52.8$ & $90.5$ & $42.3$ & $83.0$ \\
-        \texttt{slope}    & $33.6$ & $64.6$ & $13.8$ & $51.0$ \\
-        \texttt{fbs}      & $9.8$  & $2.7$  & $61.0$ & $3.5$  \\
-        \texttt{oldpeak}  & $6.7$  & $0.0$  & $4.9$  & $28.0$ \\
-        \texttt{trestbps} & $6.4$  & $0.3$  & $1.6$  & $28.0$ \\
-        \texttt{thalach}  & $6.0$  & $0.3$  & $0.8$  & $26.5$ \\
-        \texttt{exang}    & $6.0$  & $0.3$  & $0.8$  & $26.5$ \\
-        \texttt{chol}     & $3.3$  & $7.8$  & $0.0$  & $3.5$  \\
+        \texttt{ca}                                       & $66.4$ & $99.0$ & $95.9$ & $99.0$ \\
+        \texttt{thal}                                     & $52.8$ & $90.5$ & $42.3$ & $83.0$ \\
+        \texttt{slope}                                    & $33.6$ & $64.6$ & $13.8$ & $51.0$ \\
+        \texttt{fbs}                                      & $9.8$  & $2.7$  & $61.0$ & $3.5$  \\
+        \texttt{oldpeak}                                  & $6.7$  & $0.0$  & $4.9$  & $28.0$ \\
+        \texttt{trestbps}                                 & $6.4$  & $0.3$  & $1.6$  & $28.0$ \\
+        \texttt{thalach}                                  & $6.0$  & $0.3$  & $0.8$  & $26.5$ \\
+        \texttt{exang}                                    & $6.0$  & $0.3$  & $0.8$  & $26.5$ \\
+        \texttt{chol}                                     & $3.3$  & $7.8$  & $0.0$  & $3.5$  \\
         \bottomrule
     \end{tabular}
     \caption{Distribución de valores faltantes en Heart Disease, global y
@@ -467,16 +481,16 @@ Tabla~\ref{tab:heart-resultados}.
     \begin{tabular}{lccccc}
         \toprule
         \rowcolor{headerblue}
-        \textcolor{headertext}{\textbf{Modelo}} &
+        \textcolor{headertext}{\textbf{Modelo}}                  &
         \textcolor{headertext}{\textbf{Mejores hiperparámetros}} &
-        \textcolor{headertext}{\textbf{CV Acc.}} &
-        \textcolor{headertext}{\textbf{Test Acc.}} &
-        \textcolor{headertext}{\textbf{Recall}} &
-        \textcolor{headertext}{\textbf{F1}}                                                                                                  \\
+        \textcolor{headertext}{\textbf{CV Acc.}}                 &
+        \textcolor{headertext}{\textbf{Test Acc.}}               &
+        \textcolor{headertext}{\textbf{Recall}}                  &
+        \textcolor{headertext}{\textbf{F1}}                                                                                                                                            \\
         \midrule
-        KNN               & $k=7$, \textit{distance}, manhattan & $0.8217$          & $\mathbf{0.8442}$ & $0.8627$          & $\mathbf{0.8599}$ \\
-        Árbol de Decisión & gini, depth$=5$, split$=5$          & $0.7880$          & $0.7536$          & $0.7320$          & $0.7671$          \\
-        SVM               & RBF, $C=1$, $\gamma=$scale          & $\mathbf{0.8400}$ & $0.8225$          & $\mathbf{0.8693}$ & $0.8444$          \\
+        KNN                                                      & $k=7$, \textit{distance}, manhattan & $0.8217$          & $\mathbf{0.8442}$ & $0.8627$          & $\mathbf{0.8599}$ \\
+        Árbol de Decisión                                        & gini, depth$=5$, split$=5$          & $0.7880$          & $0.7536$          & $0.7320$          & $0.7671$          \\
+        SVM                                                      & RBF, $C=1$, $\gamma=$scale          & $\mathbf{0.8400}$ & $0.8225$          & $\mathbf{0.8693}$ & $0.8444$          \\
         \bottomrule
     \end{tabular}
     \caption{Resultados de los tres clasificadores sobre Heart Disease.}
@@ -560,13 +574,13 @@ patrón de hiperparámetros más relevantes
     \begin{tabular}{lll}
         \toprule
         \rowcolor{headerblue}
-        \textcolor{headertext}{\textbf{Modelo}} &
+        \textcolor{headertext}{\textbf{Modelo}}                       &
         \textcolor{headertext}{\textbf{Hiperparámetro más relevante}} &
-        \textcolor{headertext}{\textbf{$\Delta$ accuracy}}                    \\
+        \textcolor{headertext}{\textbf{$\Delta$ accuracy}}                                               \\
         \midrule
-        KNN               & \texttt{n\_neighbors} & $0.0249$ \\
-        Árbol de Decisión & \texttt{max\_depth}   & $0.0161$ \\
-        SVM               & \texttt{C}            & $0.0096$ \\
+        KNN                                                           & \texttt{n\_neighbors} & $0.0249$ \\
+        Árbol de Decisión                                             & \texttt{max\_depth}   & $0.0161$ \\
+        SVM                                                           & \texttt{C}            & $0.0096$ \\
         \bottomrule
     \end{tabular}
     \caption{Hiperparámetro más sensible por modelo sobre Heart Disease.}
@@ -595,15 +609,15 @@ los tres clasificadores sobre los dos conjuntos.
     \begin{tabular}{lcccc}
         \toprule
         \rowcolor{headerblue}
-        \textcolor{headertext}{\textbf{Modelo}} &
+        \textcolor{headertext}{\textbf{Modelo}}           &
         \textcolor{headertext}{\textbf{Cancer Test Acc.}} &
-        \textcolor{headertext}{\textbf{Cancer Test F1}} &
-        \textcolor{headertext}{\textbf{Heart Test Acc.}} &
-        \textcolor{headertext}{\textbf{Heart Test F1}}                                                                            \\
+        \textcolor{headertext}{\textbf{Cancer Test F1}}   &
+        \textcolor{headertext}{\textbf{Heart Test Acc.}}  &
+        \textcolor{headertext}{\textbf{Heart Test F1}}                                                                                    \\
         \midrule
-        KNN               & $0.9532$          & $0.9394$          & $\mathbf{0.8442}$ & $\mathbf{0.8599}$ \\
-        Árbol de Decisión & $0.9474$          & $0.9302$          & $0.7536$          & $0.7671$          \\
-        SVM               & $\mathbf{0.9766}$ & $\mathbf{0.9692}$ & $0.8225$          & $0.8444$          \\
+        KNN                                               & $0.9532$          & $0.9394$          & $\mathbf{0.8442}$ & $\mathbf{0.8599}$ \\
+        Árbol de Decisión                                 & $0.9474$          & $0.9302$          & $0.7536$          & $0.7671$          \\
+        SVM                                               & $\mathbf{0.9766}$ & $\mathbf{0.9692}$ & $0.8225$          & $0.8444$          \\
         \bottomrule
     \end{tabular}
     \caption{Comparación cruzada de los mejores modelos en los dos

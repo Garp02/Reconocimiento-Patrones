@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  13 MAY 2026 19:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.17)  13 MAY 2026 21:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -983,251 +983,257 @@ LaTeX Info: Redefining \% on input line 7.
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
 [6]
-<Img/01_boxplot_cancer_Características_Medias.png, id=155, 940.4736pt x 489.7497pt>
+<Img/01_boxplot_cancer_Características_Medias.png, id=157, 940.4736pt x 489.7497pt>
 File: Img/01_boxplot_cancer_Características_Medias.png Graphic file (type png)
 <use Img/01_boxplot_cancer_Características_Medias.png>
-Package pdftex.def Info: Img/01_boxplot_cancer_Características_Medias.png  used on input line 78.
+Package pdftex.def Info: Img/01_boxplot_cancer_Características_Medias.png  used on input line 79.
 (pdftex.def)             Requested size: 491.67645pt x 256.03885pt.
-<Img/01_boxplot_cancer_Valores_Extremos.png, id=156, 940.4736pt x 489.2679pt>
+<Img/01_boxplot_cancer_Error_Estándar.png, id=158, 940.7145pt x 482.0409pt>
+File: Img/01_boxplot_cancer_Error_Estándar.png Graphic file (type png)
+<use Img/01_boxplot_cancer_Error_Estándar.png>
+Package pdftex.def Info: Img/01_boxplot_cancer_Error_Estándar.png  used on input line 87.
+(pdftex.def)             Requested size: 491.67645pt x 251.94987pt.
+
+
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+[7 <./Img/01_boxplot_cancer_Características_Medias.png>]
+<Img/01_boxplot_cancer_Valores_Extremos.png, id=171, 940.4736pt x 489.2679pt>
 File: Img/01_boxplot_cancer_Valores_Extremos.png Graphic file (type png)
 <use Img/01_boxplot_cancer_Valores_Extremos.png>
-Package pdftex.def Info: Img/01_boxplot_cancer_Valores_Extremos.png  used on input line 80.
+Package pdftex.def Info: Img/01_boxplot_cancer_Valores_Extremos.png  used on input line 95.
 (pdftex.def)             Requested size: 491.67645pt x 255.78697pt.
 
 
-LaTeX Info: Redefining \. on input line 86.
-LaTeX Info: Redefining \% on input line 86.
-LaTeX Info: Redefining \. on input line 86.
-LaTeX Info: Redefining \% on input line 86.
-[7]
-
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
-[8 <./Img/01_boxplot_cancer_Características_Medias.png> <./Img/01_boxplot_cancer_Valores_Extremos.png>]
-<Img/02_distribucion_smote_cancer.png, id=173, 787.0203pt x 321.3606pt>
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+[8 <./Img/01_boxplot_cancer_Error_Estándar.png> <./Img/01_boxplot_cancer_Valores_Extremos.png>]
+<Img/02_distribucion_smote_cancer.png, id=179, 787.0203pt x 321.3606pt>
 File: Img/02_distribucion_smote_cancer.png Graphic file (type png)
 <use Img/02_distribucion_smote_cancer.png>
-Package pdftex.def Info: Img/02_distribucion_smote_cancer.png  used on input line 101.
+Package pdftex.def Info: Img/02_distribucion_smote_cancer.png  used on input line 115.
 (pdftex.def)             Requested size: 439.92561pt x 179.63705pt.
-<Img/03_varianza_acumulada_pesea_mle.png, id=175, 723.1818pt x 338.4645pt>
+<Img/03_varianza_acumulada_pesea_mle.png, id=181, 723.1818pt x 338.4645pt>
 File: Img/03_varianza_acumulada_pesea_mle.png Graphic file (type png)
 <use Img/03_varianza_acumulada_pesea_mle.png>
-Package pdftex.def Info: Img/03_varianza_acumulada_pesea_mle.png  used on input line 122.
+Package pdftex.def Info: Img/03_varianza_acumulada_pesea_mle.png  used on input line 136.
 (pdftex.def)             Requested size: 491.67645pt x 230.12183pt.
 
 
-LaTeX Info: Redefining \. on input line 128.
-LaTeX Info: Redefining \% on input line 128.
-LaTeX Info: Redefining \. on input line 128.
-LaTeX Info: Redefining \% on input line 128.
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
 [9 <./Img/02_distribucion_smote_cancer.png>]
-<Img/04_varianza_acumulada_pesea_var_95.png, id=185, 505.4082pt x 282.8166pt>
+<Img/04_varianza_acumulada_pesea_var_95.png, id=191, 505.4082pt x 282.8166pt>
 File: Img/04_varianza_acumulada_pesea_var_95.png Graphic file (type png)
 <use Img/04_varianza_acumulada_pesea_var_95.png>
-Package pdftex.def Info: Img/04_varianza_acumulada_pesea_var_95.png  used on input line 131.
+Package pdftex.def Info: Img/04_varianza_acumulada_pesea_var_95.png  used on input line 145.
 (pdftex.def)             Requested size: 439.92561pt x 246.1736pt.
-<Img/05_pca_2d.png, id=187, 476.982pt x 361.1091pt>
+<Img/05_pca_2d.png, id=193, 476.982pt x 361.1091pt>
 File: Img/05_pca_2d.png Graphic file (type png)
 <use Img/05_pca_2d.png>
-Package pdftex.def Info: Img/05_pca_2d.png  used on input line 145.
+Package pdftex.def Info: Img/05_pca_2d.png  used on input line 159.
 (pdftex.def)             Requested size: 414.04623pt x 313.46811pt.
 
 
-LaTeX Info: Redefining \. on input line 150.
-LaTeX Info: Redefining \% on input line 150.
-LaTeX Info: Redefining \. on input line 150.
-LaTeX Info: Redefining \% on input line 150.
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
 [10 <./Img/03_varianza_acumulada_pesea_mle.png> <./Img/04_varianza_acumulada_pesea_var_95.png>]
 
-LaTeX Info: Redefining \. on input line 191.
-LaTeX Info: Redefining \% on input line 191.
-LaTeX Info: Redefining \. on input line 191.
-LaTeX Info: Redefining \% on input line 191.
+LaTeX Info: Redefining \. on input line 205.
+LaTeX Info: Redefining \% on input line 205.
+LaTeX Info: Redefining \. on input line 205.
+LaTeX Info: Redefining \% on input line 205.
 [11 <./Img/05_pca_2d.png>]
-<Img/06_matrices_confusion_cancer.png, id=207, 966.009pt x 331.2375pt>
+<Img/06_matrices_confusion_cancer.png, id=213, 966.009pt x 331.2375pt>
 File: Img/06_matrices_confusion_cancer.png Graphic file (type png)
 <use Img/06_matrices_confusion_cancer.png>
-Package pdftex.def Info: Img/06_matrices_confusion_cancer.png  used on input line 194.
+Package pdftex.def Info: Img/06_matrices_confusion_cancer.png  used on input line 208.
 (pdftex.def)             Requested size: 517.55583pt x 177.46555pt.
-<Img/07a_frontera_knn.png, id=209, 451.6875pt x 414.8298pt>
+<Img/07a_frontera_knn.png, id=215, 451.6875pt x 414.8298pt>
 File: Img/07a_frontera_knn.png Graphic file (type png)
 <use Img/07a_frontera_knn.png>
-Package pdftex.def Info: Img/07a_frontera_knn.png  used on input line 215.
+Package pdftex.def Info: Img/07a_frontera_knn.png  used on input line 229.
 (pdftex.def)             Requested size: 253.6052pt x 232.91708pt.
-<Img/07b_frontera_arbol.png, id=210, 451.6875pt x 414.8298pt>
+<Img/07b_frontera_arbol.png, id=216, 451.6875pt x 414.8298pt>
 File: Img/07b_frontera_arbol.png Graphic file (type png)
 <use Img/07b_frontera_arbol.png>
-Package pdftex.def Info: Img/07b_frontera_arbol.png  used on input line 216.
+Package pdftex.def Info: Img/07b_frontera_arbol.png  used on input line 230.
 (pdftex.def)             Requested size: 253.6052pt x 232.91708pt.
-<Img/07c_frontera_svm.png, id=211, 451.6875pt x 414.8298pt>
+<Img/07c_frontera_svm.png, id=217, 451.6875pt x 414.8298pt>
 File: Img/07c_frontera_svm.png Graphic file (type png)
 <use Img/07c_frontera_svm.png>
-Package pdftex.def Info: Img/07c_frontera_svm.png  used on input line 218.
+Package pdftex.def Info: Img/07c_frontera_svm.png  used on input line 232.
 (pdftex.def)             Requested size: 253.6052pt x 232.91708pt.
 
 
-LaTeX Info: Redefining \. on input line 223.
-LaTeX Info: Redefining \% on input line 223.
-LaTeX Info: Redefining \. on input line 223.
-LaTeX Info: Redefining \% on input line 223.
+LaTeX Info: Redefining \. on input line 237.
+LaTeX Info: Redefining \% on input line 237.
+LaTeX Info: Redefining \. on input line 237.
+LaTeX Info: Redefining \% on input line 237.
 [12 <./Img/06_matrices_confusion_cancer.png>]
-<Img/08_arbol_decision_cancer.png, id=220, 1022.6205pt x 588.0369pt>
+<Img/08_arbol_decision_cancer.png, id=226, 1022.6205pt x 588.0369pt>
 File: Img/08_arbol_decision_cancer.png Graphic file (type png)
 <use Img/08_arbol_decision_cancer.png>
-Package pdftex.def Info: Img/08_arbol_decision_cancer.png  used on input line 237.
+Package pdftex.def Info: Img/08_arbol_decision_cancer.png  used on input line 251.
 (pdftex.def)             Requested size: 517.55583pt x 297.62474pt.
 
 
-LaTeX Info: Redefining \. on input line 241.
-LaTeX Info: Redefining \% on input line 241.
-LaTeX Info: Redefining \. on input line 241.
-LaTeX Info: Redefining \% on input line 241.
+LaTeX Info: Redefining \. on input line 255.
+LaTeX Info: Redefining \% on input line 255.
+LaTeX Info: Redefining \. on input line 255.
+LaTeX Info: Redefining \% on input line 255.
 [13 <./Img/07a_frontera_knn.png> <./Img/07b_frontera_arbol.png> <./Img/07c_frontera_svm.png>]
-<Img/09_comparacion_exactitud_cancer.png, id=232, 642.4803pt x 353.8821pt>
+<Img/09_comparacion_exactitud_cancer.png, id=238, 642.4803pt x 353.8821pt>
 File: Img/09_comparacion_exactitud_cancer.png Graphic file (type png)
 <use Img/09_comparacion_exactitud_cancer.png>
-Package pdftex.def Info: Img/09_comparacion_exactitud_cancer.png  used on input line 257.
+Package pdftex.def Info: Img/09_comparacion_exactitud_cancer.png  used on input line 271.
 (pdftex.def)             Requested size: 439.92561pt x 242.31596pt.
 
 
-LaTeX Info: Redefining \. on input line 262.
-LaTeX Info: Redefining \% on input line 262.
-LaTeX Info: Redefining \. on input line 262.
-LaTeX Info: Redefining \% on input line 262.
+LaTeX Info: Redefining \. on input line 276.
+LaTeX Info: Redefining \% on input line 276.
+LaTeX Info: Redefining \. on input line 276.
+LaTeX Info: Redefining \% on input line 276.
 [14 <./Img/08_arbol_decision_cancer.png>]
 
-LaTeX Info: Redefining \. on input line 314.
-LaTeX Info: Redefining \% on input line 314.
-LaTeX Info: Redefining \. on input line 314.
-LaTeX Info: Redefining \% on input line 314.
+LaTeX Info: Redefining \. on input line 328.
+LaTeX Info: Redefining \% on input line 328.
+LaTeX Info: Redefining \. on input line 328.
+LaTeX Info: Redefining \% on input line 328.
 [15 <./Img/09_comparacion_exactitud_cancer.png>]
 
-LaTeX Info: Redefining \. on input line 372.
-LaTeX Info: Redefining \% on input line 372.
-LaTeX Info: Redefining \. on input line 372.
-LaTeX Info: Redefining \% on input line 372.
+LaTeX Info: Redefining \. on input line 386.
+LaTeX Info: Redefining \% on input line 386.
+LaTeX Info: Redefining \. on input line 386.
+LaTeX Info: Redefining \% on input line 386.
 [16]
-<Img/h_00_distribucion_clases.png, id=258, 497.9403pt x 317.988pt>
+<Img/h_00_distribucion_clases.png, id=264, 497.9403pt x 317.988pt>
 File: Img/h_00_distribucion_clases.png Graphic file (type png)
 <use Img/h_00_distribucion_clases.png>
-Package pdftex.def Info: Img/h_00_distribucion_clases.png  used on input line 375.
+Package pdftex.def Info: Img/h_00_distribucion_clases.png  used on input line 389.
 (pdftex.def)             Requested size: 336.40813pt x 214.83156pt.
-<Img/h_01_boxplot_continuas.png, id=259, 1003.5894pt x 426.393pt>
+<Img/h_01_boxplot_continuas.png, id=265, 1003.5894pt x 426.393pt>
 File: Img/h_01_boxplot_continuas.png Graphic file (type png)
 <use Img/h_01_boxplot_continuas.png>
-Package pdftex.def Info: Img/h_01_boxplot_continuas.png  used on input line 383.
+Package pdftex.def Info: Img/h_01_boxplot_continuas.png  used on input line 397.
 (pdftex.def)             Requested size: 517.55583pt x 219.89738pt.
 
 
-LaTeX Info: Redefining \. on input line 399.
-LaTeX Info: Redefining \% on input line 399.
-LaTeX Info: Redefining \. on input line 399.
-LaTeX Info: Redefining \% on input line 399.
+LaTeX Info: Redefining \. on input line 413.
+LaTeX Info: Redefining \% on input line 413.
+LaTeX Info: Redefining \. on input line 413.
+LaTeX Info: Redefining \% on input line 413.
 [17 <./Img/h_00_distribucion_clases.png> <./Img/h_01_boxplot_continuas.png>]
-<Img/h_02_distribucion_smote.png, id=270, 787.0203pt x 321.3606pt>
+<Img/h_02_distribucion_smote.png, id=276, 787.0203pt x 321.3606pt>
 File: Img/h_02_distribucion_smote.png Graphic file (type png)
 <use Img/h_02_distribucion_smote.png>
-Package pdftex.def Info: Img/h_02_distribucion_smote.png  used on input line 411.
+Package pdftex.def Info: Img/h_02_distribucion_smote.png  used on input line 425.
 (pdftex.def)             Requested size: 439.92561pt x 179.63705pt.
-<Img/h_03_varianza_acumulada_mle.png, id=273, 723.1818pt x 338.4645pt>
+<Img/h_03_varianza_acumulada_mle.png, id=279, 723.1818pt x 338.4645pt>
 File: Img/h_03_varianza_acumulada_mle.png Graphic file (type png)
 <use Img/h_03_varianza_acumulada_mle.png>
-Package pdftex.def Info: Img/h_03_varianza_acumulada_mle.png  used on input line 430.
+Package pdftex.def Info: Img/h_03_varianza_acumulada_mle.png  used on input line 444.
 (pdftex.def)             Requested size: 491.67645pt x 230.12183pt.
 
 
-LaTeX Info: Redefining \. on input line 435.
-LaTeX Info: Redefining \% on input line 435.
-LaTeX Info: Redefining \. on input line 435.
-LaTeX Info: Redefining \% on input line 435.
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
 [18 <./Img/h_02_distribucion_smote.png>]
-<Img/h_04_varianza_acumulada_var95.png, id=284, 499.1448pt x 282.8166pt>
+<Img/h_04_varianza_acumulada_var95.png, id=290, 499.1448pt x 282.8166pt>
 File: Img/h_04_varianza_acumulada_var95.png Graphic file (type png)
 <use Img/h_04_varianza_acumulada_var95.png>
-Package pdftex.def Info: Img/h_04_varianza_acumulada_var95.png  used on input line 438.
+Package pdftex.def Info: Img/h_04_varianza_acumulada_var95.png  used on input line 452.
 (pdftex.def)             Requested size: 439.92561pt x 249.27206pt.
-<Img/h_05_pca_2d.png, id=286, 570.2103pt x 425.6703pt>
+<Img/h_05_pca_2d.png, id=292, 570.2103pt x 425.6703pt>
 File: Img/h_05_pca_2d.png Graphic file (type png)
 <use Img/h_05_pca_2d.png>
-Package pdftex.def Info: Img/h_05_pca_2d.png  used on input line 452.
+Package pdftex.def Info: Img/h_05_pca_2d.png  used on input line 466.
 (pdftex.def)             Requested size: 414.04623pt x 309.09993pt.
 
 
-LaTeX Info: Redefining \. on input line 457.
-LaTeX Info: Redefining \% on input line 457.
-LaTeX Info: Redefining \. on input line 457.
-LaTeX Info: Redefining \% on input line 457.
+LaTeX Info: Redefining \. on input line 471.
+LaTeX Info: Redefining \% on input line 471.
+LaTeX Info: Redefining \. on input line 471.
+LaTeX Info: Redefining \% on input line 471.
 [19 <./Img/h_03_varianza_acumulada_mle.png> <./Img/h_04_varianza_acumulada_var95.png>]
-<Img/h_06_matrices_confusion.png, id=297, 999.4941pt x 331.2375pt>
+<Img/h_06_matrices_confusion.png, id=303, 999.4941pt x 331.2375pt>
 File: Img/h_06_matrices_confusion.png Graphic file (type png)
 <use Img/h_06_matrices_confusion.png>
-Package pdftex.def Info: Img/h_06_matrices_confusion.png  used on input line 496.
+Package pdftex.def Info: Img/h_06_matrices_confusion.png  used on input line 510.
 (pdftex.def)             Requested size: 517.55583pt x 171.52678pt.
 
 
-LaTeX Info: Redefining \. on input line 501.
-LaTeX Info: Redefining \% on input line 501.
-LaTeX Info: Redefining \. on input line 501.
-LaTeX Info: Redefining \% on input line 501.
+LaTeX Info: Redefining \. on input line 515.
+LaTeX Info: Redefining \% on input line 515.
+LaTeX Info: Redefining \. on input line 515.
+LaTeX Info: Redefining \% on input line 515.
 [20 <./Img/h_05_pca_2d.png>]
-<Img/h_07a_frontera_knn.png, id=307, 514.8033pt x 414.8298pt>
+<Img/h_07a_frontera_knn.png, id=314, 514.8033pt x 414.8298pt>
 File: Img/h_07a_frontera_knn.png Graphic file (type png)
 <use Img/h_07a_frontera_knn.png>
-Package pdftex.def Info: Img/h_07a_frontera_knn.png  used on input line 516.
+Package pdftex.def Info: Img/h_07a_frontera_knn.png  used on input line 530.
 (pdftex.def)             Requested size: 253.6052pt x 204.3571pt.
-<Img/h_07b_frontera_arbol.png, id=308, 514.8033pt x 414.8298pt>
+<Img/h_07b_frontera_arbol.png, id=315, 514.8033pt x 414.8298pt>
 File: Img/h_07b_frontera_arbol.png Graphic file (type png)
 <use Img/h_07b_frontera_arbol.png>
-Package pdftex.def Info: Img/h_07b_frontera_arbol.png  used on input line 517.
+Package pdftex.def Info: Img/h_07b_frontera_arbol.png  used on input line 531.
 (pdftex.def)             Requested size: 253.6052pt x 204.3571pt.
-<Img/h_07c_frontera_svm.png, id=309, 514.8033pt x 414.8298pt>
+<Img/h_07c_frontera_svm.png, id=316, 514.8033pt x 414.8298pt>
 File: Img/h_07c_frontera_svm.png Graphic file (type png)
 <use Img/h_07c_frontera_svm.png>
-Package pdftex.def Info: Img/h_07c_frontera_svm.png  used on input line 519.
+Package pdftex.def Info: Img/h_07c_frontera_svm.png  used on input line 533.
 (pdftex.def)             Requested size: 253.6052pt x 204.3571pt.
 
 
-LaTeX Info: Redefining \. on input line 524.
-LaTeX Info: Redefining \% on input line 524.
-LaTeX Info: Redefining \. on input line 524.
-LaTeX Info: Redefining \% on input line 524.
+LaTeX Info: Redefining \. on input line 538.
+LaTeX Info: Redefining \% on input line 538.
+LaTeX Info: Redefining \. on input line 538.
+LaTeX Info: Redefining \% on input line 538.
 [21 <./Img/h_06_matrices_confusion.png>]
-<Img/h_08_arbol_decision.png, id=319, 1051.7694pt x 588.0369pt>
+<Img/h_08_arbol_decision.png, id=325, 1051.7694pt x 588.0369pt>
 File: Img/h_08_arbol_decision.png Graphic file (type png)
 <use Img/h_08_arbol_decision.png>
-Package pdftex.def Info: Img/h_08_arbol_decision.png  used on input line 537.
+Package pdftex.def Info: Img/h_08_arbol_decision.png  used on input line 551.
 (pdftex.def)             Requested size: 517.55583pt x 289.36089pt.
 
 
-LaTeX Info: Redefining \. on input line 541.
-LaTeX Info: Redefining \% on input line 541.
-LaTeX Info: Redefining \. on input line 541.
-LaTeX Info: Redefining \% on input line 541.
+LaTeX Info: Redefining \. on input line 555.
+LaTeX Info: Redefining \% on input line 555.
+LaTeX Info: Redefining \. on input line 555.
+LaTeX Info: Redefining \% on input line 555.
 [22 <./Img/h_07a_frontera_knn.png> <./Img/h_07b_frontera_arbol.png> <./Img/h_07c_frontera_svm.png>]
-<Img/h_09_comparacion_exactitud.png, id=331, 642.4803pt x 353.8821pt>
+<Img/h_09_comparacion_exactitud.png, id=337, 642.4803pt x 353.8821pt>
 File: Img/h_09_comparacion_exactitud.png Graphic file (type png)
 <use Img/h_09_comparacion_exactitud.png>
-Package pdftex.def Info: Img/h_09_comparacion_exactitud.png  used on input line 552.
+Package pdftex.def Info: Img/h_09_comparacion_exactitud.png  used on input line 566.
 (pdftex.def)             Requested size: 439.92561pt x 242.31596pt.
 
 
-LaTeX Info: Redefining \. on input line 556.
-LaTeX Info: Redefining \% on input line 556.
-LaTeX Info: Redefining \. on input line 556.
-LaTeX Info: Redefining \% on input line 556.
+LaTeX Info: Redefining \. on input line 570.
+LaTeX Info: Redefining \% on input line 570.
+LaTeX Info: Redefining \. on input line 570.
+LaTeX Info: Redefining \% on input line 570.
 [23 <./Img/h_08_arbol_decision.png>]
-Overfull \hbox (2.93pt too wide) in paragraph at lines 595--610
+Overfull \hbox (2.93pt too wide) in paragraph at lines 609--624
  [][] 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 613.
-LaTeX Info: Redefining \% on input line 613.
-LaTeX Info: Redefining \. on input line 613.
-LaTeX Info: Redefining \% on input line 613.
+LaTeX Info: Redefining \. on input line 627.
+LaTeX Info: Redefining \% on input line 627.
+LaTeX Info: Redefining \. on input line 627.
+LaTeX Info: Redefining \% on input line 627.
 [24 <./Img/h_09_comparacion_exactitud.png>]) (./Conclusiones.tex
 
 LaTeX Info: Redefining \. on input line 21.
@@ -1241,7 +1247,7 @@ LaTeX Info: Redefining \% on input line 133.
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
 [27]
-runsystem(latexminted cleantemp  --timestamp 20260513193147 5BFA97D83FAFF355F2A84D12FC7AEB3B)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260513214005 5BFA97D83FAFF355F2A84D12FC7AEB3B)...executed safely (allowed).
 
  (build/Practica4.aux
 LaTeX Info: Redefining \. on input line 12.
@@ -1255,10 +1261,10 @@ Package rerunfilecheck Info: File `Practica4.out' has not changed.
 (rerunfilecheck)             Checksum: 689244DED132D581965444C541326DB5;3270.
  ) 
 Here is how much of TeX's memory you used:
- 31240 strings out of 473197
- 605347 string characters out of 5718604
- 1119566 words of memory out of 5000000
- 53861 multiletter control sequences out of 15000+600000
+ 31251 strings out of 473197
+ 605756 string characters out of 5718604
+ 1119785 words of memory out of 5000000
+ 53870 multiletter control sequences out of 15000+600000
  571925 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,13n,93p,620b,770s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1266,10 +1272,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{P4} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on build/Practica4.pdf (27 pages, 5807331 bytes).
+Output written on build/Practica4.pdf (27 pages, 6032437 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 121 named destinations out of 1000 (max. 500000)
- 279 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 346 compressed objects within 4 object streams
+ 123 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 
