@@ -1,0 +1,112 @@
+\subsection{Aplicación y comparación de clasificadores}
+
+Selecciona conjuntos de datos para entrenar distintos modelos de
+clasificación variando la configuración de sus hiperparámetros.
+
+\textbf{Conjuntos de datos propuestos:}
+
+\begin{itemize}
+    \item \textbf{Clasificación Multimodelo para Cáncer de Mama}
+          (\href{https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic}{\textit{Breast Cancer Wisconsin Diagnostic}}):
+          conjunto de datos biomédicos que contiene características numéricas
+          derivadas de imágenes digitales de aspiraciones con aguja fina (FNA)
+          de masas mamarias, utilizadas para clasificar tumores como benignos
+          o malignos.
+    \item \textbf{Detección Temprana de Parkinson, voz y biomarcadores acústicos}
+          (\href{https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring}{\textit{Parkinsons Telemonitoring}}):
+          conjunto diseñado para apoyar la investigación en el diagnóstico de
+          la enfermedad de Parkinson. Contiene medidas biomédicas de voz
+          obtenidas de personas sanas y pacientes con la enfermedad, con el
+          objetivo de diferenciar ambos grupos mediante técnicas de aprendizaje
+          automático.
+    \item \textbf{Clasificación de Cardiopatía}
+          (\href{https://archive.ics.uci.edu/dataset/45/heart+disease}{\textit{Heart Disease}}):
+          recopila información de pacientes para determinar la probabilidad de
+          enfermedad cardíaca, codificada en una variable objetivo que indica
+          la presencia o ausencia de la condición. Entre las variables
+          predictoras se incluyen edad, sexo, presión arterial en reposo, nivel
+          de colesterol, frecuencia cardíaca máxima y resultados de pruebas
+          electrocardiográficas.
+    \item \textbf{Verificador de síntomas de COVID-19}
+          (\href{https://www.kaggle.com/datasets/iamhungundji/covid19-symptoms-checker}{\textit{COVID Symptom Classification Dataset}}):
+          los datos identifican si una persona padece o no la enfermedad del
+          coronavirus, basándose en algunos síntomas estándar predefinidos.
+          Dichos síntomas se basan en las directrices de la OMS y del
+          Ministerio de Salud y Bienestar Familiar de la India.
+\end{itemize}
+
+\begin{enumerate}
+    \item \textbf{Carga y análisis de datos:}
+          \begin{enumerate}
+              \item Cargar el conjunto de datos.
+              \item Visualización de la distribución de clases.
+              \item Análisis de valores faltantes (porcentaje por columna).
+          \end{enumerate}
+
+    \item \textbf{Preprocesamiento y limpieza:}
+          \begin{enumerate}
+              \item Separación de tipos de variables (columnas numéricas y categóricas).
+              \item Verificar y aplicar limpieza de datos (faltantes,
+                    \textit{outliers}, caracteres inválidos, etc.).
+              \item Estandarización de características (escaladores).
+              \item Separación en 70\% entrenamiento y 30\% prueba.
+              \item Manejo del desbalance de clases sobre el conjunto de
+                    entrenamiento (por ejemplo SMOTE, ADASYN o sobremuestreo
+                    aleatorio).
+              \item Visualización de la distribución.
+          \end{enumerate}
+
+    \item \textbf{Reducción de dimensionalidad por PCA:}
+          \begin{enumerate}
+              \item Aplicar PCA a los datos balanceados.
+              \item Cálculo de la varianza acumulada.
+              \item Encontrar el número de componentes para el 95\% de varianza.
+              \item Gráfico del número de componentes principales y varianza
+                    acumulada.
+          \end{enumerate}
+
+    \item \textbf{Definición de modelos, esquema de trabajo y búsqueda en
+              cuadrícula:}
+          \begin{enumerate}
+              \item Desarrollar un esquema de funciones (\textit{pipelines})
+                    que integren el preprocesamiento y el clasificador.
+              \item Búsqueda en cuadrícula (\textit{grid search}) para encontrar
+                    los mejores hiperparámetros.
+          \end{enumerate}
+
+    \item \textbf{Configuración de modelos y cuadro de hiperparámetros:}
+          \begin{enumerate}
+              \item \textbf{KNN}:
+                    \begin{itemize}
+                        \item vecinos (1, 3, 5, 7, 9).
+                        \item pesos (\textit{weights: ['uniform', 'distance']}).
+                        \item distancia (\textit{metric: ['euclidean', 'manhattan']}).
+                    \end{itemize}
+              \item \textbf{Árbol de decisión}:
+                    \begin{itemize}
+                        \item profundidad (\textit{[3, 5, 7, None]}).
+                        \item muestras mínimas por división (\textit{[2, 5, 10]}).
+                        \item criterio (\textit{['gini', 'entropy']}).
+                    \end{itemize}
+              \item \textbf{SVM}:
+                    \begin{itemize}
+                        \item kernel (\textit{['linear', 'rbf']}).
+                        \item Regularización $C$ (0.1, 1, 10).
+                        \item Gamma (\textit{['scale', 'auto', 0.01, 0.1]}).
+                    \end{itemize}
+          \end{enumerate}
+
+    \item \textbf{Entrenamiento, evaluación y comparación de resultados:}
+          \begin{enumerate}
+              \item Mejores métricas de rendimiento sobre conjunto de prueba
+                    por conjunto de datos.
+              \item Matriz de confusión de los modelos entrenados con las
+                    mejores métricas.
+              \item Fronteras de decisión superponiendo datos de entrenamiento
+                    y prueba.
+              \item Árbol entrenado con los mejores parámetros.
+              \item Comparación de exactitud entre modelos.
+              \item ¿Qué hiperparámetro fue más relevante por modelo para cada
+                    conjunto de datos?
+          \end{enumerate}
+\end{enumerate}
